@@ -6,13 +6,13 @@ following packages:
 * Rubber (a LaTeX compiler)
 * GNU Make
 
-To build the CV, do the following
+To build the CV, do the following:
 
 ```sh
 $ make
 ```
 
-To cleanup the build::
+To cleanup the build:
 
 ```sh
 $ make
