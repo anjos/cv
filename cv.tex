@@ -3,7 +3,7 @@
 \typeout{ Andre Anjos <andre.anjos@idiap.ch> }
 \typeout{ ====================================================================}
 
-\documentclass[11pt,a4paper,sans]{moderncv}
+\documentclass[10pt,a4paper,sans]{moderncv}
 
 % styles: 'casual' (default), 'classic', 'oldstyle','banking'
 \moderncvstyle{casual}
@@ -15,7 +15,7 @@
 \usepackage{textcomp}
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage[scale=0.8]{geometry}
 % if you want to change the width of the column with the dates
 %\setlength{\hintscolumnwidth}{3cm}
 
@@ -25,6 +25,17 @@
 % typographical risks...
 
 %\setlength{\makecvtitlenamewidth}{10cm}
+
+% hyperref setup
+\definecolor{linkcolor}{rgb}{0.1,0.1,0.4}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,     % false: boxed links; true: colored links
+  linkcolor=linkcolor, % color of internal links (change box color with linkbordercolor)
+  citecolor=linkcolor, % color of links to bibliography
+  filecolor=linkcolor, % color of file links
+  urlcolor=linkcolor   % color of external links
+}
 
 % personal data
 \firstname{André}
@@ -71,10 +82,13 @@ Switzerland, CH-1920}{}
 \input{education}
 \input{professional}
 \input{other}
+\input{publications}
+\clearpage
 
 % Publications from a BibTeX file without multibib
 % for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
 % to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\renewcommand{\refname}{Publications (reverse chronological order)}
 \nocite{*}
 \bibliographystyle{plainyr-rev}
 \bibliography{website}  
