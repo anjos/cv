@@ -4,5 +4,5 @@
 *.log
 *.out
 rubber.cache
-cv.pdf
+*.pdf
 *~
