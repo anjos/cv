@@ -15,5 +15,9 @@ $ make
 To cleanup the build:
 
 ```sh
-$ make
+$ make clean
 ```
+
+Upload the CV to your website:
+
+scp cv.pdf andreanjos@andreanjos.org:andreanjos.org/public/static/cv/cv.pdf
