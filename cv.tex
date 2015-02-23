@@ -9,7 +9,7 @@
 \moderncvstyle{casual}
 
 % colors: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey', 'black'
-\moderncvcolor{blue}                          
+\moderncvcolor{blue}
 
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
@@ -28,21 +28,25 @@
 
 % hyperref setup
 \definecolor{linkcolor}{rgb}{0.1,0.1,0.4}
-\usepackage{hyperref}
-\hypersetup{
-  colorlinks=true,     % false: boxed links; true: colored links
+
+\AfterPreamble{\hypersetup{
+  pdfauthor={Andre Anjos},
+  pdftitle={Curriculum Vitate for Andre Anjos},
+  pdfsubject={Detailed Curriculum Vitae for Andre Anjos},
+  urlcolor=blue,
+  colorlinks=true,    % false: boxed links; true: colored links
   linkcolor=linkcolor, % color of internal links (change box color with linkbordercolor)
   citecolor=linkcolor, % color of links to bibliography
   filecolor=linkcolor, % color of file links
   urlcolor=linkcolor   % color of external links
-}
+}}
 
 % personal data
 \firstname{André}
 \familyname{Anjos}
 
 % optional, remove / comment the line if not wanted
-\title{Signal Processing Enginner, D.Sc.} 
+\title{Signal Processing Enginner, D.Sc.}
 
 % optional, remove / comment the line if not wanted
 \address{Idiap Research Institute, rue Marconi 19, Centre du Parc, Martigny,
@@ -82,7 +86,7 @@ Switzerland, CH-1920}{}
 \input{education}
 \input{professional}
 \input{other}
-%\input{publications}
+\input{publications}
 %\clearpage
 
 % Publications from a BibTeX file without multibib
@@ -91,7 +95,7 @@ Switzerland, CH-1920}{}
 \renewcommand{\refname}{Publications (reverse chronological order)}
 \nocite{*}
 \bibliographystyle{plainyr-rev}
-\bibliography{website}  
+\bibliography{website}
 
 \end{document}
 
