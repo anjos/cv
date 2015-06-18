@@ -1,0 +1,103 @@
+\typeout{ ====================================================================}
+\typeout{ This is file cv, created at Tue 22 Jan 2013 09:05:58 CET }
+\typeout{ Andre Anjos <andre.anjos@idiap.ch> }
+\typeout{ ====================================================================}
+
+\documentclass[10pt,a4paper,sans]{moderncv}
+
+% styles: 'casual' (default), 'classic', 'oldstyle','banking'
+\moderncvstyle{casual}
+
+% colors: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey', 'black'
+\moderncvcolor{blue}
+
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+% if you want to change the width of the column with the dates
+%\setlength{\hintscolumnwidth}{3cm}
+
+% for the 'classic' style, if you want to force the width allocated to your
+% name and avoid line breaks. be careful though, the length is normally
+% calculated to avoid any overlap with your personal info; use this at your own
+% typographical risks...
+
+%\setlength{\makecvtitlenamewidth}{10cm}
+
+% hyperref setup
+\definecolor{linkcolor}{rgb}{0.1,0.1,0.4}
+
+\AfterPreamble{\hypersetup{
+  pdfauthor={Andre Anjos},
+  pdftitle={Curriculum Vitate for Andre Anjos},
+  pdfsubject={Detailed Curriculum Vitae for Andre Anjos},
+  urlcolor=blue,
+  colorlinks=true,    % false: boxed links; true: colored links
+  linkcolor=linkcolor, % color of internal links (change box color with linkbordercolor)
+  citecolor=linkcolor, % color of links to bibliography
+  filecolor=linkcolor, % color of file links
+  urlcolor=linkcolor   % color of external links
+}}
+
+% personal data
+\firstname{André}
+\familyname{Anjos}
+
+% optional, remove / comment the line if not wanted
+\title{Signal Processing Enginner, D.Sc.}
+
+% optional, remove / comment the line if not wanted
+\address{Idiap Research Institute, rue Marconi 19, Centre du Parc, Martigny,
+Switzerland, CH-1920}{}
+
+% optional, remove / comment the line if not wanted
+\mobile{+41767092708}
+
+% optional, remove / comment the line if not wanted
+\phone{+41277217763}
+
+% optional, remove / comment the line if not wanted
+\fax{+41277217712}
+
+% optional, remove / comment the line if not wanted
+\email{andre.anjos@idiap.ch}
+
+% optional, remove / comment the line if not wanted
+\homepage{andreanjos.org}
+
+% optional, remove / comment the line if not wanted
+%\extrainfo{}
+
+% optional, remove / comment the line if not wanted
+% '64pt' is the height the picture must be resized to, 0.4pt is the thickness
+% of the frame around it (put it to 0pt for no frame) and 'picture' is the name
+% of the picture file
+\photo[64pt][0.4pt]{picture}
+
+% optional, remove / comment the line if not wanted
+%\quote{Some quote}
+
+\begin{document}
+
+\makecvtitle
+
+\input{biography}
+\input{education}
+\input{professional}
+%\input{other}
+\input{publications}
+%\clearpage
+
+% Publications from a BibTeX file without multibib
+% for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+% to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\renewcommand{\refname}{Publications (reverse chronological order)}
+\nocite{*}
+\bibliographystyle{plainyr-rev}
+\bibliography{website}
+
+\end{document}
+
+\typeout{ *************** End of file cv *************** }
