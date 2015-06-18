@@ -15,6 +15,7 @@ short: $(short:%.tex=%.pdf)
 
 clean:
 	rubber --clean --pdf $(file)
+	rubber --clean --pdf $(short)
 	rm -f *~ *.out
 
 mrproper: clean
