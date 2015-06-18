@@ -1,9 +1,12 @@
-# Created by Andre Anjos <andre.anjos@idiap.ch> 
-# Wed 16 Jan 2013 18:00:08 CET 
+# Created by Andre Anjos <andre.anjos@idiap.ch>
+# Wed 16 Jan 2013 18:00:08 CET
 
 file=cv.tex
+short=short_cv.tex
 
 all: $(file:%.tex=%.pdf)
+
+short: $(short:%.tex=%.pdf)
 
 %.pdf: %.tex
 	rubber --cache --pdf $<
