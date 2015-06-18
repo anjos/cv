@@ -12,6 +12,13 @@ To build the CV, do the following:
 $ make
 ```
 
+There is a short version of the CV for special occasions. To compile it, do the
+following:
+
+```sh
+$ make short
+```
+
 To cleanup the build:
 
 ```sh
