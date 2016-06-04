@@ -5,4 +5,5 @@
 *.out
 rubber.cache
 *.pdf
+*.swp
 *~
