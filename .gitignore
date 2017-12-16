@@ -7,3 +7,4 @@ rubber.cache
 *.pdf
 *.swp
 *~
+.DS_Store
