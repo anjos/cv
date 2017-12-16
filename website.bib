@@ -1,4 +1,19 @@
 %%%%%%%%%%%%
+%%  2018  %%
+%%%%%%%%%%%%
+
+@inproceedings{icb-2018,
+  author = "Nikisins, Olegs and Mohammadi, Amir and Anjos, André and Marcel, Sébastien",
+  month = "February",
+  title = "On Effectiveness of Anomaly Detection Approaches against Unseen Presentation Attacks in Face Anti-Spoofing",
+  booktitle = "The 11th IAPR International Conference on Biometrics (ICB 2018)",
+  year = "2018",
+  url = "https://publications.idiap.ch/index.php/publications/show/3793",
+  pdf = "https://www.idiap.ch/~aanjos/papers/icb-2018.pdf",
+  abstract = "While face recognition systems got a significant boost in terms of recognition performance in recent years, they are known to be vulnerable to presentation attacks. Up to date, most of the research in the field of face anti-spoofing or presentation attack detection was considered as a two-class classification task: features of bona-fide samples versus features coming from spoofing attempts. The main focus has been on boosting the anti-spoofing performance for databases with identical types of attacks across both training and evaluation subsets. However, in realistic applications the types of attacks are likely to be unknown, potentially occupying a broad space in the feature domain. Therefore, a failure to generalize on unseen types of attacks is one of the main potential challenges in existing anti-spoofing approaches. First, to demonstrate the generalization issues of two-class anti-spoofing systems we establish new evaluation protocols for existing publicly available databases. Second, to unite the data collection efforts of various institutions we introduce a challenging Aggregated database composed of 3 publicly available datasets: Replay-Attack, Replay-Mobile and MSU MFSD, reporting the performance on it. Third, considering existing limitations we propose a number of systems approaching a task of presentation attack detection as an anomaly detection, or a one-class classification problem, using only bona-fide features in the training stage. Using less training data, hence requiring less effort in the data collection, the introduced approach demonstrates a better generalization properties against previously unseen types of attacks on the proposed Aggregated database.",
+}
+
+%%%%%%%%%%%%
 %%  2017  %%
 %%%%%%%%%%%%
 
@@ -762,7 +777,7 @@ To bridge this gap, we built an open platform for research in computational scie
   OPTnumber = "",
   OPTpages  = "",
   pdf     = "https://www.idiap.ch/~aanjos/papers/enfpc-2005-2.pdf",
-  abstract   = "Este trabalho apresenta um discriminador neural que opera sobre as quantidades calculadas pelo algoritmo T2Calo, responsvel pela deteção elétron/jato no Segundo Nível de Filtragem do experimento ATLAS. Este sistema de deteção melhora a eficiência de deteção em quase 10 pontos percentuais, mantendo um nível de desempenho compatível com as restrições operacionais do sistema de filtragem.",
+  abstract   = "Este trabalho apresenta um discriminador neural que opera sobre as quantidades calculadas pelo algoritmo T2Calo, responsável pela deteção elétron/jato no Segundo Nível de Filtragem do experimento ATLAS. Este sistema de deteção melhora a eficiência de deteção em quase 10 pontos percentuais, mantendo um nível de desempenho compatível com as restrições operacionais do sistema de filtragem.",
 }
 
 
@@ -775,7 +790,7 @@ To bridge this gap, we built an open platform for research in computational scie
   OPTnumber = "",
   OPTpages  = "",
   pdf     = "https://www.idiap.ch/~aanjos/papers/enfpc-2005.pdf",
-  abstract   = "Este trabalho apresenta um discriminador neural para o segundo nível de filtragem do ATLAS, atuando no problema de separação elétron/jato baseado em informações de calorimetria. Para reduzir a alta dimensionalidade dos dados de entrada, as regiões de interesse (RoI) identificadas no primeiro nível são organizadas em anéis concêntricos de deposição energética. Este tipo de pré-processamento dos dados permite eficiente compactação dos sinais e alcança elevada capacidade de identificar elétrons. Atualmente, esse sistema vem sendo portado para o ambiente de emulação do sistema de filtragem ATHENA, de modo a se obter uma avaliação realística de seu desempenho. O ambiente tem o objetivo de simular o comportamento do sistema de filtragem, ajudando, desta forma, no desenvolvimento e validação dos algoritmos. Em carter comparativo, o sistema proposto foi também implementado usando a tecnologia DSP.",
+  abstract   = "Este trabalho apresenta um discriminador neural para o segundo nível de filtragem do ATLAS, atuando no problema de separação elétron/jato baseado em informações de calorimetria. Para reduzir a alta dimensionalidade dos dados de entrada, as regiões de interesse (RoI) identificadas no primeiro nível são organizadas em anéis concêntricos de deposição energética. Este tipo de pré-processamento dos dados permite eficiente compactação dos sinais e alcança elevada capacidade de identificar elétrons. Atualmente, esse sistema vem sendo portado para o ambiente de emulação do sistema de filtragem ATHENA, de modo a se obter uma avaliação realística de seu desempenho. O ambiente tem o objetivo de simular o comportamento do sistema de filtragem, ajudando, desta forma, no desenvolvimento e validação dos algoritmos. Em caráter comparativo, o sistema proposto foi também implementado usando a tecnologia DSP.",
 }
 
 
@@ -911,14 +926,14 @@ To bridge this gap, we built an open platform for research in computational scie
   OPTnumber = "",
   OPTpages  = "",
   pdf     = "https://www.idiap.ch/~aanjos/papers/enfpc-2004.pdf",
-  abstract   = "O Experimento ATLAS conta com um sistema de Filtragem bastante complexo e dividido em 4 grandes sub-sistemas: (i) O Primeiro Nível de Filtragem que realiza os primeiros passos da seleção de eventos na cadeia de filtragem; (ii) O Software Online, responsvel pelas áreas de controle e operação do sistema;(iii) O Sistema de Fluxo de Dados (Dataflow) que coordena a transmissão e armazenamento dos dados do detetor do experimento; (iv) Os Filtros de Alto Nível, que implementam os algoritmos de discriminação, representando o topo da cadeia de seleção de eventos no ATLAS.
+  abstract   = "O Experimento ATLAS conta com um sistema de Filtragem bastante complexo e dividido em 4 grandes sub-sistemas: (i) O Primeiro Nível de Filtragem que realiza os primeiros passos da seleção de eventos na cadeia de filtragem; (ii) O Software Online, responsável pelas áreas de controle e operação do sistema;(iii) O Sistema de Fluxo de Dados (Dataflow) que coordena a transmissão e armazenamento dos dados do detetor do experimento; (iv) Os Filtros de Alto Nível, que implementam os algoritmos de discriminação, representando o topo da cadeia de seleção de eventos no ATLAS.
 
-Para aumentar a portabilidade entre os algoritmos de filtragem desenvolvidos por toda a comunidade do experimento, os desenvolvedores dos Filtros de Alto Nível (ou simplesmente HLT; High-Level Triggers)  propuseram a reutilização do ambiente de programação online Athena dentro do sistema que operar em tempo real. Para tal, o HLT utiliza as ferramentas propostas pelo sub-sistema de Fluxo de Dados para  coordenar as operações da transferência de informação para dentro e para fora dos nós de processamento sistema. Dentre outras restrições, o produto final deverá ser suficientemente rápido e operável em tarefas concorrentes em máquinas (SMP) com vários processadores rodando Linux.  Neste trabalho apresentamos alguns dos problemas e soluções encontrados pelo grupo no desenvolvimento e teste do conjunto de bibliotecas que compõe o HLT.",
+Para aumentar a portabilidade entre os algoritmos de filtragem desenvolvidos por toda a comunidade do experimento, os desenvolvedores dos Filtros de Alto Nível (ou simplesmente HLT; High-Level Triggers)  propuseram a reutilização do ambiente de programação online Athena dentro do sistema que operará em tempo real. Para tal, o HLT utiliza as ferramentas propostas pelo sub-sistema de Fluxo de Dados para  coordenar as operações da transferência de informação para dentro e para fora dos nós de processamento sistema. Dentre outras restrições, o produto final deverá ser suficientemente rápido e operável em tarefas concorrentes em máquinas (SMP) com vários processadores rodando Linux.  Neste trabalho apresentamos alguns dos problemas e soluções encontrados pelo grupo no desenvolvimento e teste do conjunto de bibliotecas que compõe o HLT.",
 }
 
 
 @article {ieee-tns-2004-7,
-  author  = "J.T. Baines AND C.P. Bee AND A. Bogaerts AND M. Bosman AND D. Botterill AND B. Caron AND A. Anjos AND F. Etienne AND S. Gonz\'{a}lez AND K. Karr AND W. Li AND C. Meessen AND G. Merino AND A. Negri AND J. L. Pinfold AND P. Pinto AND Z. Qian AND F. Touchard AND P. Werner AND S. Wheeler AND F.J. Wickens AND W. Wiedenmann AND and G. Zobernig",
+  author  = "J.T. Baines AND C.P. Bee AND A. Bogaerts AND M. Bosman AND D. Botterill AND B. Caron AND A. Anjos AND F. Etienne AND S. González AND K. Karr AND W. Li AND C. Meessen AND G. Merino AND A. Negri AND J. L. Pinfold AND P. Pinto AND Z. Qian AND F. Touchard AND P. Werner AND S. Wheeler AND F.J. Wickens AND W. Wiedenmann AND and G. Zobernig",
   title   = "An Overview of the ATLAS High-Level Trigger Dataflow and Supervision",
   journal = "IEEE Transaction on Nuclear Science",
   year    = "2004",
@@ -1150,13 +1165,13 @@ Para aumentar a portabilidade entre os algoritmos de filtragem desenvolvidos por
   OPTnumber = "",
   OPTpages  = "",
   pdf       = "https://www.idiap.ch/~aanjos/papers/enfpc-2001.pdf",
-  abstract   = "O experimento ATLAS estar operacional no ano de 2006. O objetivo principal deste experimento é a deteção do bóson de Higgs, usando entre outros tipos de detetores, calorímetros. Um dos canais de deteção mais importantes no experimento é o de elétrons com alta energia transversa, representando de 30 a 40\% do total das assinaturas a serem analisadas pelo Sistema de Filtragem. Jatos (de partículas) confundem-se comumente com elétrons pela forma que interagem com os calorímetros. Neste trabalho, apresentamos um sistema de discriminação elétron-jato baseado em redes neurais especialistas, utilizando os dados dos calorímetros do ATLAS. Este sistema, depois de treinado, compacta o espaço de variáveis de entrada (células dos calorímetros) em um subespaço que mantém os aspectos necessários para uma deteção eficiente de elétrons. Os resultados apresentados se mostram melhores que os resultados obtidos usando-se técnicas desenvolvidas no CERN, com o mesmo objetivo.",
+  abstract   = "O experimento ATLAS estará operacional no ano de 2006. O objetivo principal deste experimento é a deteção do bóson de Higgs, usando entre outros tipos de detetores, calorímetros. Um dos canais de deteção mais importantes no experimento é o de elétrons com alta energia transversa, representando de 30 a 40\% do total das assinaturas a serem analisadas pelo Sistema de Filtragem. Jatos (de partículas) confundem-se comumente com elétrons pela forma que interagem com os calorímetros. Neste trabalho, apresentamos um sistema de discriminação elétron-jato baseado em redes neurais especialistas, utilizando os dados dos calorímetros do ATLAS. Este sistema, depois de treinado, compacta o espaço de variáveis de entrada (células dos calorímetros) em um subespaço que mantém os aspectos necessários para uma deteção eficiente de elétrons. Os resultados apresentados se mostram melhores que os resultados obtidos usando-se técnicas desenvolvidas no CERN, com o mesmo objetivo.",
 }
 
 
 @phdthesis {msc-thesis-2001,
   author = "André Anjos",
-  title  = "Sistema neuronal rpido de decisão baseado em calorimetria de altas energias",
+  title  = "Sistema neuronal rápido de decisão baseado em calorimetria de altas energias",
   school = "COPPE/UFRJ",
   year   = "2001",
   pdf     = "https://www.idiap.ch/~aanjos/papers/msc-thesis-2001.pdf",
@@ -1176,7 +1191,7 @@ Para aumentar a portabilidade entre os algoritmos de filtragem desenvolvidos por
   OPTnumber = "",
   OPTpages  = "",
   pdf     = "https://www.idiap.ch/~aanjos/papers/enfpc-2000.pdf",
-  abstract   = "Propõe-se neste trabalho, que a anlise conduzida no Segundo Nível de Filtragem do Experimento ATLAS, no CERN, seja feita por meio de processamento neural sobre a região de interesse previamente destacada pelo Primeiro Nível nos Calorímetros. Por depender do posicionamento da RoI no detetor, os números de camadas, granularides e profundidades das células do calorímetro são desconhecidos até o momento da chegada do evento ao sistema de análise. Ainda assim, estima-se que o número de células para análise estará em torno de 1000 por RoI.  As eficiências de separação obtidas, tempos de execução e uma comparação com a eficiência de outros métodos empregados para a mesma atividade são discutidas.",
+  abstract   = "Propõe-se neste trabalho, que a análise conduzida no Segundo Nível de Filtragem do Experimento ATLAS, no CERN, seja feita por meio de processamento neural sobre a região de interesse previamente destacada pelo Primeiro Nível nos Calorímetros. Por depender do posicionamento da RoI no detetor, os números de camadas, granularides e profundidades das células do calorímetro são desconhecidos até o momento da chegada do evento ao sistema de análise. Ainda assim, estima-se que o número de células para análise estará em torno de 1000 por RoI.  As eficiências de separação obtidas, tempos de execução e uma comparação com a eficiência de outros métodos empregados para a mesma atividade são discutidas.",
 }
 
 %%%%%%%%%%%%
@@ -1192,7 +1207,7 @@ Para aumentar a portabilidade entre os algoritmos de filtragem desenvolvidos por
   OPTnumber = "",
   OPTpages  = "",
   pdf     = "https://www.idiap.ch/~aanjos/papers/enfpc-1999.pdf",
-  abstract   = "Este artigo contém um sumrio do trabalho realizado no âmbito dos estudos de portabilidade da infraestrutura do fluxo de dados do Sistema de Filtragem, originalmente escritos em C e operando em Sistemas Operacionais comerciais para uma implementação orientada a objetos baseada em C++ rodando sobre Linux. Ele discute as vantagens deste enfoque, tanto em termos de mantenibilidade quanto do custo final de projeto.",
+  abstract   = "Este artigo contém um sumário do trabalho realizado no âmbito dos estudos de portabilidade da infraestrutura do fluxo de dados do Sistema de Filtragem, originalmente escritos em C e operando em Sistemas Operacionais comerciais para uma implementação orientada a objetos baseada em C++ rodando sobre Linux. Ele discute as vantagens deste enfoque, tanto em termos de mantenibilidade quanto do custo final de projeto.",
 }
 
 %%%%%%%%%%%%
@@ -1208,7 +1223,7 @@ Para aumentar a portabilidade entre os algoritmos de filtragem desenvolvidos por
   OPTnumber = "",
   pages   = "32--33",
   pdf     = "https://www.idiap.ch/~aanjos/papers/2009/01/09/sbf98.pdf",
-  abstract   = "O experimento ATLAS pretende comprovar a existência do bóson de Higgs. Para tal, um grande sistema de deteção e aquisição vem sendo projetado. O sistema aquisição tem a função de separar em tempo real interações originrias do decaimento de um Higgs de física ordinária. A filtragem de eventos no sistema de aquisição é concebida em três níveis, de complexidade crescente e velocidade decrescente. O segundo nível pretende utilizar redes de computadores pessoais (PC\'s) interconectados por rápidos sistemas de rede. A escolha de fabricantes, sistemas operacionais e algoritmos de processamento ainda não foi feita, mas esforços em prol desta decisão vêm sendo realizados. Neste trabalho desenvolve-se uma fração do filtro de segundo nível utilizando-se de processamento paralelo, redes neurais artificiais e DSP\'s.",
+  abstract   = "O experimento ATLAS pretende comprovar a existência do bóson de Higgs. Para tal, um grande sistema de deteção e aquisição vem sendo projetado. O sistema aquisição tem a função de separar em tempo real interações originárias do decaimento de um Higgs de física ordinária. A filtragem de eventos no sistema de aquisição é concebida em três níveis, de complexidade crescente e velocidade decrescente. O segundo nível pretende utilizar redes de computadores pessoais (PC\'s) interconectados por rápidos sistemas de rede. A escolha de fabricantes, sistemas operacionais e algoritmos de processamento ainda não foi feita, mas esforços em prol desta decisão vêm sendo realizados. Neste trabalho desenvolve-se uma fração do filtro de segundo nível utilizando-se de processamento paralelo, redes neurais artificiais e DSP\'s.",
 }
 
 
@@ -1244,23 +1259,23 @@ Para aumentar a portabilidade entre os algoritmos de filtragem desenvolvidos por
 
 @phdthesis {grad-thesis-1997,
   author = "André Rabello dos Anjos",
-  title  = "Sistema de classificação baseado em uma mquina com sistema distribuído",
+  title  = "Sistema de classificação baseado em uma máquina com sistema distribuído",
   school = "Departamento de Eletronica/UFRJ",
   year   = "1997",
   pdf     = "https://www.idiap.ch/~aanjos/papers/grad-thesis-1997.pdf",
-  abstract   = "Na busca de novos canais físicos em experimentos com partículas colididas, sistemas de validação têm se mostrado de grande valia. Normalmente os subprodutos de colisões interparticulares representam física ordinria e conhecida enquanto que nova física aparece camuflada neste meio. A impossibilidade de gravação e análise do imenso volume de dados produzido nestes ambientes exige o uso de sistemas de validação para que se maximize o espaço de gravação e se minimize o espaço de procura de novos fenômenos.
+  abstract   = "Na busca de novos canais físicos em experimentos com partículas colididas, sistemas de validação têm se mostrado de grande valia. Normalmente os subprodutos de colisões interparticulares representam física ordinária e conhecida enquanto que nova física aparece camuflada neste meio. A impossibilidade de gravação e análise do imenso volume de dados produzido nestes ambientes exige o uso de sistemas de validação para que se maximize o espaço de gravação e se minimize o espaço de procura de novos fenômenos.
 
-Em particular, no CERN, o par acelerador/colisionador do LHC, que estar operacional no ano de 2005, utilizará um destes sistemas de validação baseado em 3 níveis em cascata de complexidade crescente e velocidade decrescente. Este sistema tem por objetivo a análise e filtragem, em tempo real, de um volume de dados cuja taxa chega à impressionante faixa de 100.000.000 por segundo.
+Em particular, no CERN, o par acelerador/colisionador do LHC, que estará operacional no ano de 2005, utilizará um destes sistemas de validação baseado em 3 níveis em cascata de complexidade crescente e velocidade decrescente. Este sistema tem por objetivo a análise e filtragem, em tempo real, de um volume de dados cuja taxa chega à impressionante faixa de 100.000.000 por segundo.
 
 A divisão do sistema em 3 etapas distintas visa produzir um sistema de validação o mais eficiente e dinâmico possível, sem que se sobrecarregue nenhuma das partes. Para o primeiro nível estima-se a utilização de processadores velozes, com nível baixo de programação, capazes de suportar a taxa inicial dos eventos. Para o terceiro nível o uso de pesado ambiente computacional é previsto.
 
-No segundo nível ambientes altamente programveis serão combinados com técnicas de paralelização de aplicações para que atinjamos a taxa de processamento requerida de 100.000 eventos por segundo.
+No segundo nível ambientes altamente programáveis serão combinados com técnicas de paralelização de aplicações para que atinjamos a taxa de processamento requerida de 100.000 eventos por segundo.
 
-Vrios tipos de tecnologia estão sendo testadas em todo o mundo para que se decida, não somente sobre a arquitetura, mas, também, sobre o tipo de equipamento a ser empregado neste extenso sistema de classificação.
+Vários tipos de tecnologia estão sendo testadas em todo o mundo para que se decida, não somente sobre a arquitetura, mas, também, sobre o tipo de equipamento a ser empregado neste extenso sistema de classificação.
 
-Este trabalho é sobre a implementação em uma mquina com processamento distribuído de uma das arquiteturas previstas para o segundo nível de validação (ou classificação) do experimento ATLAS/LHC. A  máquina em questão é um sistema Telmat TN310 com processamento distribuído por 16 nós padrão HTRAM totalmente conectados através de uma rede de chaves assíncronas. A arquitetura mencionada prevê a utilização de técnicas de paralelismo de dados e fluxo na obtenção de menores tempos de processamento.
+Este trabalho é sobre a implementação em uma máquina com processamento distribuído de uma das arquiteturas previstas para o segundo nível de validação (ou classificação) do experimento ATLAS/LHC. A  máquina em questão é um sistema Telmat TN310 com processamento distribuído por 16 nós padrão HTRAM totalmente conectados através de uma rede de chaves assíncronas. A arquitetura mencionada prevê a utilização de técnicas de paralelismo de dados e fluxo na obtenção de menores tempos de processamento.
 
-O objetivo final é entender se o processamento em sistemas semelhantes a uma TN310 (visamos o tipo de nó-de-processamento e o padrão de conexão entre estes) pode ser vivel para o segundo nível de validação. Isto se dará através da análise e capacidade de abstração proporcionadas pelo desenvolvimento da aplicação sugerida no equipamento.
+O objetivo final é entender se o processamento em sistemas semelhantes a uma TN310 (visamos o tipo de nó-de-processamento e o padrão de conexão entre estes) pode ser viável para o segundo nível de validação. Isto se dará através da análise e capacidade de abstração proporcionadas pelo desenvolvimento da aplicação sugerida no equipamento.
 
 Soma-se ao trabalho o desenvolvimento de uma unidade de decisões globais baseado em redes neurais. A unidade constitui processo central do sistema de validação. Resultados atingidos são expostos e discussões sobre técnicas de implementação são realizadas no decorrer da documentação.",
 }
