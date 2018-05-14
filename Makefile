@@ -15,14 +15,14 @@ snsf-cv: $(snsf_2p_cv:%.tex=%.pdf)
 snsf-publist: $(snsf_publist:%.tex=%.pdf)
 
 %.pdf: %.tex
-	rubber --cache --pdf $<
+	pdflatex $<
+	biber $(<:%.tex=%)
+	pdflatex $<
+	pdflatex $<
 
-.PHONY: clean mrproper
+.PHONY: clean
 
 clean:
-	rubber --clean --pdf $(file)
-	rubber --clean --pdf $(short)
-	rm -f *~ *.out
-
-mrproper: clean
-	rm -f $(file:%.tex=%.pdf) rubber.cache
+	@rm -vf $(shell find . -name "*~")
+	@rm -vf *.log *.lot *.lof *.loa *.toc *.idx *.inc *.ilg *.ind *.bbl *.blg
+	@rm -vf *.aux *.glo *.dvi *.ps proposal.pdf *.out *.brf *.bcf *.run.xml

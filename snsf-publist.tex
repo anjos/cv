@@ -13,6 +13,9 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
+\usepackage[defernumbers=true]{biblatex}
+
+\addbibresource{five-last-years.bib}
 
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
@@ -40,6 +43,9 @@
   filecolor=linkcolor, % color of file links
   urlcolor=linkcolor   % color of external links
 }}
+
+\DeclareFieldFormat{labelnumberwidth}{}
+\setlength{\biblabelsep}{0pt}
 
 % personal data
 \firstname{André}
@@ -92,8 +98,14 @@ Switzerland, CH-1920}{}
 \renewcommand{\bibliographyitemlabel}{\@{\arabic{enumiv}}}
 \renewcommand{\refname}{Publications (reverse chronological order)}
 \nocite{*}
-\bibliographystyle{plainyr-rev}
-\bibliography{five-last-years}
+
+\printbibliography[title={Peer Reviewed Journal Articles}, type=article, resetnumbers=true]
+
+\printbibliography[title={Peer Reviewed Conference Proceedings}, type=inproceedings, resetnumbers=true]
+
+\printbibliography[title={Participation on Books}, type=incollection, resetnumbers=true]
+
+\printbibliography[title={Open Access Archive}, type=misc, resetnumbers=true]
 
 \end{document}
 

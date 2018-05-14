@@ -8,3 +8,5 @@ rubber.cache
 *.swp
 *~
 .DS_Store
+*.bcf
+*.run.xml
