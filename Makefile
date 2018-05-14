@@ -3,10 +3,13 @@
 
 file=cv.tex
 short=short_cv.tex
+snsf_2p_cv=snsf-2p-cv.tex
 
 all: $(file:%.tex=%.pdf)
 
 short: $(short:%.tex=%.pdf)
+
+snsf-cv: $(snsf_2p_cv:%.tex=%.pdf)
 
 %.pdf: %.tex
 	rubber --cache --pdf $<
