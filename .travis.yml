@@ -1,3 +1,4 @@
+dist: xenial
 language: python
 
 python:
@@ -5,6 +6,7 @@ python:
 
 addons:
   apt:
+    update: true
     packages:
     - texlive-latex-extra
     - texlive-fonts-extra
