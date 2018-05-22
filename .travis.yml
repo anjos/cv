@@ -5,7 +5,7 @@ python:
   - "3.6"
 
 before_install:
-  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-base texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra biber
+  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full biber
   - pdflatex --version
   - biber --version
 
