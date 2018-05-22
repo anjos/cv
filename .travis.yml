@@ -1,4 +1,3 @@
-dist: xenial #required for moderncv compilation
 language: python
 
 python:
