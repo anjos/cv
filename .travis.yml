@@ -1,13 +1,16 @@
-sudo: required
+dist: xenial #required for moderncv compilation
 language: python
 
 python:
   - "3.6"
 
-before_install:
-  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-latex-extra texlive-fonts-extra texlive-fonts-recommended biber
-  - pdflatex --version
-  - biber --version
+addons:
+  apt:
+    packages:
+    - texlive-latex-extra
+    - texlive-fonts-extra
+    - texlive-fonts-recommended
+    - biber
 
 install:
   # We do this conditionally because it saves us some downloading if the
@@ -22,6 +25,8 @@ install:
   - conda env create --quiet -f build.yml
   - source activate cv
   - conda info -a
+  - pdflatex --version
+  - biber --version
 
 script:
   - make
