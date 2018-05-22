@@ -8,6 +8,7 @@ addons:
   apt:
     update: true
     packages:
+    - texlive-bibtex-extra
     - texlive-latex-extra
     - texlive-fonts-extra
     - texlive-fonts-recommended
