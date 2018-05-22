@@ -3,7 +3,7 @@
 \typeout{ Andre Anjos <andre.anjos@idiap.ch> }
 \typeout{ ====================================================================}
 
-\documentclass[11pt,a4paper,sans]{moderncv}
+\documentclass[12pt,a4paper,sans]{moderncv}
 
 % styles: 'casual' (default), 'classic', 'oldstyle','banking'
 \moderncvstyle{casual}
@@ -13,9 +13,10 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
-\usepackage[defernumbers=true]{biblatex}
 
-\addbibresource{five-last-years.bib}
+% sorting=none will preserve the bib file order
+\usepackage[backend=biber,sorting=none]{biblatex}
+\addbibresource{filtered.bib}
 
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
@@ -28,6 +29,10 @@
 % typographical risks...
 
 %\setlength{\makecvtitlenamewidth}{10cm}
+
+% stores the starting year (current year - 4)
+\usepackage{calc}
+\newcounter{startyear}
 
 % hyperref setup
 \definecolor{linkcolor}{rgb}{0.1,0.1,0.4}
@@ -87,15 +92,15 @@ Switzerland, CH-1920}{}
 
 \begin{document}
 
-\section{List of Publications for André Anjos (2014 -- 2018)}
+\setcounter{startyear}{\year-4}
+\section{List of Publications for André Anjos (\thestartyear\ -- \the\year)}
 
 \cvitem{Complete list}{\url{http://andreanjos.org}}
-\cvitem{H-index}{ = 21, 10000+ citations, Source: \url{http://scholar.google.com/citations?hl=en&user=pAfLhMoAAAAJ}}
+\cvitem{H-index}{ = 21, 10000+ citations}
+\cvitem{Scholar}{\url{http://scholar.google.com/citations?hl=en&user=pAfLhMoAAAAJ}}
 
-% Publications from a BibTeX file without multibib
 % for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
 % to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\renewcommand{\bibliographyitemlabel}{\@{\arabic{enumiv}}}
 \renewcommand{\refname}{Publications (reverse chronological order)}
 \nocite{*}
 

@@ -10,3 +10,4 @@ rubber.cache
 .DS_Store
 *.bcf
 *.run.xml
+filtered.bib

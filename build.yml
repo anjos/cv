@@ -1,0 +1,12 @@
+name: cv
+channels:
+- https://www.idiap.ch/software/bob/conda
+- anjos
+- defaults
+dependencies:
+- python=3.6
+- six
+- pyyaml
+- ipdb
+- pip:
+  - pybtex

@@ -1,0 +1,40 @@
+sudo: required
+language: python
+
+python:
+  - "3.6"
+
+before_install:
+  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-base texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra biber
+  - pdflatex --version
+  - biber --version
+
+install:
+  # We do this conditionally because it saves us some downloading if the
+  # version is the same.
+  - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+  - bash miniconda.sh -b -p $HOME/conda
+  - export PATH="$HOME/conda/bin:$PATH"
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
+  - conda config --add channels anjos
+  - conda update -y -n base -q conda
+  - conda env create --quiet -f build.yml
+  - source activate cv
+  - conda info -a
+
+script:
+  - make
+  - mkdir builds
+  - cp *.pdf builds
+
+notifications:
+  email:
+    on_success: always
+    on_failure: always
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  local_dir: builds

@@ -1,24 +1,25 @@
 # Created by Andre Anjos <andre.anjos@idiap.ch>
 # Wed 16 Jan 2013 18:00:08 CET
 
-file=cv.tex
-short=short_cv.tex
-snsf_2p_cv=snsf-2p-cv.tex
-snsf_publist=snsf-publist.tex
+all: cv snsf-cv snsf-publist
 
-all: $(file:%.tex=%.pdf)
+cv:
+	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
+	biber $@
+	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
+	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
 
-short: $(short:%.tex=%.pdf)
+snsf-cv:
+	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
+	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
 
-snsf-cv: $(snsf_2p_cv:%.tex=%.pdf)
-
-snsf-publist: $(snsf_publist:%.tex=%.pdf)
-
-%.pdf: %.tex
-	pdflatex $<
-	biber $(<:%.tex=%)
-	pdflatex $<
-	pdflatex $<
+snsf-publist:
+	python subselect.py publications.bib filtered.bib
+	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
+	biber $@
+	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
+	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
+	rm -f filtered.bib
 
 .PHONY: clean
 
