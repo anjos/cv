@@ -12,7 +12,6 @@ addons:
     - texlive-latex-extra
     - texlive-fonts-extra
     - texlive-fonts-recommended
-    - texlive-xetex
     - lmodern
     - biber
 
