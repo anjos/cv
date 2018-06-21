@@ -4,21 +4,21 @@
 all: cv snsf-cv snsf-publist
 
 cv:
-	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
+	xelatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
 	biber $@
-	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
-	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
+	xelatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
+	xelatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
 
 snsf-cv:
-	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
-	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
+	xelatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
+	xelatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
 
 snsf-publist:
 	python subselect.py publications.bib filtered.bib
-	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
+	xelatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
 	biber $@
-	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
-	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
+	xelatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
+	xelatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
 	rm -f filtered.bib
 
 .PHONY: clean
