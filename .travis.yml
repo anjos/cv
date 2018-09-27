@@ -33,6 +33,8 @@ install:
   - conda info -a
   - lualatex --version
   - biber --version
+  - wget http://mirrors.ctan.org/macros/latex/contrib/biblatex-contrib/biblatex-publist/publist.bbx
+  - wget http://mirrors.ctan.org/macros/latex/contrib/biblatex-contrib/biblatex-publist/publist.cbx
 
 script:
   - make

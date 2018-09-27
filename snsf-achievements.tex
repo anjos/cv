@@ -11,13 +11,17 @@
 \usepackage{newpxtext} \usepackage[euler-digits]{eulervm} %Palatino-like
 %\usepackage{libertine} \usepackage[libertine]{newtxmath} %Libertine-like
 
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+
 \usepackage{hyperref}
 \usepackage{titling}
 
-\pretitle{\vspace{-8em}\begin{flushleft}\LARGE}
+\pretitle{\vspace{-6em}\begin{flushleft}\LARGE}
 \posttitle{\par\end{flushleft}}
-\preauthor{\vspace{-2em}\begin{flushleft}\Large}
-\postauthor{\par\end{flushleft}\vspace{-2em}}
+\preauthor{}
+\postauthor{}
+\author{}
 \predate{}
 \postdate{}
 \date{}
@@ -34,15 +38,111 @@ urlcolor=black
 
 \begin{document}
 
-\title{Major Scientific Achievements}
-\author{André Anjos}
+% In the section Major scientific achievements (max. 2 pages to be attached to
+% the CV) the applicant describes his/her most important scientific
+% achievements in the past five years.  Older achievements can be listed, if
+% they are of particularly high importance for the proposal. In addition to
+% scientific publications, any other relevant information, such as a knowledge
+% transfer event, a software, database, prototype, etc. may be provided here.
+% Describe for each achievement the applicant’s specific contribution and the
+% overall impact of the work.
+
+% All these items are intended for evaluators to specifically assess the
+% scientific quality and relevance of the research output. If possible, the
+% documents/sources of the various achievements should be made available to the
+% evaluators via a direct open access web-link.
+
+\title{Major Scientific Achievements (Dr. André Anjos)}
 \maketitle
 
-\section{}
+\section{Biometric Anti-Spoofing}
 
-\section{}
+We advanced the state-of-the-art in presentation attack detection (PAD) through
+various contributions, ranging from the exploration of different methods to
+address PAD and assess biometric recognition vulnerabilities, to publishing
+articles and book chapters, datasets and software for easy reproducibility of
+claimed results.  My contributions to biometric anti-spoofing in the past five
+years can be summarized as follows:
 
-\section{}
+\begin{itemize}
+  \item Anomaly Detection and Robustness: Most PAD systems work
+    discriminatively, trying to separate attacks from \textit{bona fide}
+    presentations.  We showed this technique does not generalize well to unseen
+    presentation attacks.  We explored, for the first time, alternate
+    approaches by joint-modelling client identity as a way to calibrate PAD
+    output scores\footnote{See \textit{``On the use of client identity
+    information for face anti-spoofing"}, Feb 2015", Access:,
+    \url{http://publications.idiap.ch/index.php/publications/show/3069}},
+    showing increased robustness to unseen attacks.  More recently, we also
+    showed that solely modelling \textit{bona fide} presentations is also an
+    effective way to increased PAD robustness\footnote{See \textit{``On
+    Effectiveness of Anomaly Detection Approaches against Unseen Presentation
+    Attacks in Face Anti-Spoofing"}, Feb. 2018, Access:
+    \url{https://publidiap.idiap.ch/index.php/publications/show/3793}}.
+
+  \item Vulnerability Analysis and Evaluation: We demonstrated candidate
+    presentation attack instruments and biometric recognition systems must
+    undergo a vulnerability assessment to quantify the pertinence and quality
+    of attacks\footnote{See \textit{``Biometrics Evaluation under Spoofing
+    Attacks"}, 2014, DOI:
+    \url{https://publidiap.idiap.ch/index.php/publications/show/2922}}.  We
+    also devised a way to tune protected biometric systems to various different
+    applications, with changing security requirements.
+
+  \item Visual and Multi-spectral PAD: Finally, we showed it is possible to
+    add sensors to PAD systems to improve their robustness\footnote{See
+    \textit{``Face Recognition Systems Under Spoofing Attacks"}, Feb. 2016, DOI:
+    \url{http://dx.doi.org/10.1007/978-3-319-28501-6_8}}.
+\end{itemize}
+
+This work was published as book chapters, international peer-reviewed
+scientific journals (including 2 articles at IEEE Transactions on Information
+Forensics and Security with an impact factor of 4.3) and in peer-reviewed
+conference papers totalling about 200 citations.  Accompanying software
+packages for such contributions were released publicly, under an open-source
+license. For details and more links, please refer to the applicant's Research
+Output.
+
+\section{Reproducible Research}
+
+We've been actively looking at the reproducibility of published work and how to
+lower the entrance barrier of publication readers, converting them into engaged
+users of methods we create.  We argue it is insufficient, in most cases, to
+only publish software leading to results if original data remains inaccessible.
+In particular\footnote{See \textit{``Continuously Reproducing Toolchains in
+Pattern Recognition and Machine Learning Experiments"}, Aug. 2017, Access:
+\url{https://publications.idiap.ch/index.php/publications/show/3666}}, we note
+that reproducibility should imply in the following characteristics:
+repeatability, shareability, extensibility and stability, which is not
+guaranteed by most published material to date.  We proposed a software suite
+called Bob (\url{https://www.idiap.ch/software/bob}) that possesses such such
+characteristics, demonstrating its flexibility to various tasks including
+Biometric Person Recognition (\url{https://gitlab.idiap.ch/bob/bob.bio.base}),
+Presentation Attack Detection (\url{https://gitlab.idiap.ch/bob/bob.pad.base}),
+Remote Photoplethysmography (\url{https://gitlab.idiap.ch/bob/bob.rppg.base}),
+Speech Processing (\url{https://gitlab.idiap.ch/bob/bob.kaldi}).  All
+contributions are distributed under an open-source license.
+
+From another perspective, there are legitimate cases in which raw data leading
+to research conclusions cannot be published.  Furthermore, in a growing number
+of use-cases, the availability of both software does not translate to an
+accessible reproducibility scenario.  The user, for example, may not have the
+necessary equipment to perform the analysis.  To bridge this gap, we built an
+open platform for research\footnote{\url{https:www.beat-eu.org/platform}} in
+computational sciences related to pattern recognition and machine learning, to
+help on the development, reproducibility and certification of results obtained
+in the field\footnote{See \textit{``BEAT: An Open-Science Web Platform"}, Aug.
+2017, Access:
+\url{https://publidiap.idiap.ch/index.php/publications/show/3665}}.  The BEAT
+platform is distributed under an open-source
+license\footnote{\url{https://gitlab.idiap.ch/beat/}}.
+
+Both projects are still active and support past and future work at Idiap and
+beyond.  We conducted (and will continue doing) lectures to both master and
+graduate students about reproducibility in data science (refer to the
+applicant's CV under the section ``Teaching" for details).  There are currently
+$\sim$120 \textit{direct} citations to publications about Bob and BEAT core
+frameworks.
 
 \end{document}
 
