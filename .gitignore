@@ -3,11 +3,12 @@
 *.blg
 *.log
 *.out
-rubber.cache
 *.pdf
 *.swp
 *~
 .DS_Store
 *.bcf
 *.run.xml
+*.fls
+*.fdb_latexmk
 filtered.bib

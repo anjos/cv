@@ -1,29 +1,23 @@
 # Created by Andre Anjos <andre.anjos@idiap.ch>
 # Wed 16 Jan 2013 18:00:08 CET
 
-all: cv snsf-cv snsf-publist
+MAINFILE=cv.tex snsf-cv.tex snsf-publist.tex
+PDFFILE=$(MAINFILE:%.tex=%.pdf)
 
-cv:
-	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
-	biber $@
-	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
-	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
+.PHONY : FORCE_MAKE filtered.bib clean
 
-snsf-cv:
-	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
-	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
+all: $(PDFFILE)
 
-snsf-publist:
-	python subselect.py publications.bib filtered.bib
-	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
-	biber $@
-	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
-	pdflatex -interaction=nonstopmode -halt-on-error $(@:%=%.tex)
-	rm -f filtered.bib
+%.pdf: %.tex FORCE_MAKE
+	latexmk -pdflatex=lualatex -pdf $<
 
-.PHONY: clean
+filtered.bib: publications.bib
+	python3 subselect.py $< $@
+
+snsf-publist.pdf: snsf-publist.tex filtered.bib FORCE_MAKE
+	latexmk -pdflatex=lualatex -pdf $<
 
 clean:
-	@rm -vf $(shell find . -name "*~")
+	@rm -vf $(shell find . -name "*~") filtered.bib
 	@rm -vf *.log *.lot *.lof *.loa *.toc *.idx *.inc *.ilg *.ind *.bbl *.blg
-	@rm -vf *.aux *.glo *.dvi *.ps proposal.pdf *.out *.brf *.bcf *.run.xml
+	@rm -vf *.aux *.glo *.out *.brf *.fls *.fdb_latexmk *.run.xml *.bcf $(PDFFILE)

@@ -4,6 +4,7 @@
 \typeout{ ====================================================================}
 
 \documentclass[12pt,a4paper,sans]{moderncv}
+\usepackage[T1]{fontenc}
 
 % styles: 'casual' (default), 'classic', 'oldstyle','banking'
 \moderncvstyle{casual}
@@ -11,13 +12,12 @@
 % colors: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey', 'black'
 \moderncvcolor{blue}
 
-\usepackage[utf8]{inputenc}
-\usepackage{textcomp}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-
 % sorting=none will preserve the bib file order
-\usepackage[backend=biber,sorting=none,maxbibnames=99]{biblatex}
+\usepackage{csquotes}
+\usepackage[backend=biber,maxbibnames=99,bibstyle=publist,plauthorhandling=highlight,plnumbered=true,marginyear=true,sorting=ddnt]{biblatex}
+\setlength\bibitemsep{1.5\itemsep}
+\plauthorname[André]{Anjos}
+
 \addbibresource{filtered.bib}
 
 % adjust the page margins
@@ -98,7 +98,7 @@ Switzerland, CH-1920}{}
 \section{List of Publications for André Anjos (\thestartyear\ -- \the\year)}
 
 \cvitem{Complete list}{\url{http://andreanjos.org}}
-\cvitem{H-index}{ = 21, 10000+ citations}
+\cvitem{H-index}{ = 20, 10000+ citations}
 \cvitem{Scholar}{\url{http://scholar.google.com/citations?hl=en&user=pAfLhMoAAAAJ}}
 
 % for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
@@ -106,13 +106,13 @@ Switzerland, CH-1920}{}
 \renewcommand{\refname}{Publications (reverse chronological order)}
 \nocite{*}
 
-\printbibliography[title={Peer Reviewed Journal Articles}, type=article, resetnumbers=true]
+\printbibliography[title={Peer Reviewed Journal Articles}, type=article]
 
-\printbibliography[title={Peer Reviewed Conference Proceedings}, type=inproceedings, resetnumbers=true]
+\printbibliography[title={Peer Reviewed Conference Proceedings}, type=inproceedings]
 
-\printbibliography[title={Participation on Books}, type=incollection, resetnumbers=true]
+\printbibliography[title={Participation on Books}, type=incollection]
 
-\printbibliography[title={Open Access Archive}, type=misc, resetnumbers=true]
+\printbibliography[title={Open Access Archive}, type=misc]
 
 \end{document}
 
