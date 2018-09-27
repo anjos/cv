@@ -12,6 +12,7 @@ addons:
     - texlive-latex-extra
     - texlive-fonts-extra
     - texlive-fonts-recommended
+    - texlive-luatex
     - lmodern
     - biber
     - latexmk
@@ -29,7 +30,7 @@ install:
   - conda env create --quiet -f build.yml
   - source activate cv
   - conda info -a
-  - pdflatex --version
+  - lualatex --version
   - biber --version
 
 script:
