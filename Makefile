@@ -1,7 +1,7 @@
 # Created by Andre Anjos <andre.anjos@idiap.ch>
 # Wed 16 Jan 2013 18:00:08 CET
 
-MAINFILE=cv.tex snsf-cv.tex snsf-publist.tex snsf-achievements.tex
+MAINFILE=cv.tex snsf-cv.tex snsf-research-output.tex snsf-achievements.tex
 PDFFILE=$(MAINFILE:%.tex=%.pdf)
 
 .PHONY : FORCE_MAKE filtered.bib clean
@@ -14,7 +14,7 @@ all: $(PDFFILE)
 filtered.bib: publications.bib
 	python3 subselect.py $< $@
 
-snsf-publist.pdf: snsf-publist.tex filtered.bib FORCE_MAKE
+snsf-research-output.pdf: snsf-research-output.tex filtered.bib FORCE_MAKE
 	latexmk -pdflatex=lualatex -pdf $<
 
 clean:
