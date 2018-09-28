@@ -38,7 +38,7 @@ install:
 script:
   - make cv.pdf snsf-cv.pdf snsf-achievements.pdf
   - mkdir builds
-  - cp *.pdf builds
+  - cp cv.pdf builds
   - cp publications.bib builds
 
 notifications:
