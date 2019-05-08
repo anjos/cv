@@ -36,7 +36,7 @@ install:
   - biber --version
 
 script:
-  - make cv.pdf snsf-cv.pdf snsf-achievements.pdf snsf-research-output.pdf
+  - make cv.pdf snsf-cv.pdf snsf-achievements.pdf
   - mkdir builds
   - cp cv.pdf builds
   - cp publications.bib builds
