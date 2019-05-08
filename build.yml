@@ -8,5 +8,6 @@ dependencies:
 - six
 - pyyaml
 - ipdb
+- pip
 - pip:
   - pybtex
