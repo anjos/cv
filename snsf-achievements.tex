@@ -105,6 +105,7 @@ packages for such contributions were released publicly, under an open-source
 license. For details and more links, please refer to the applicant's Research
 Output.
 
+
 \section{Reproducible Research}
 
 We've been actively looking at the reproducibility of published work and how to
@@ -145,6 +146,47 @@ graduate students about reproducibility in data science (refer to the
 applicant's CV under the section ``Teaching" for details).  There are currently
 $\sim$120 \textit{direct} citations to publications about Bob and BEAT core
 frameworks.
+
+
+\section{Semantic Segmentation for Medical Imaging}
+
+We identify and address three research gaps in the field of vessel segmentation
+for 2DFI\footnote{Access: \url{https://arxiv.org/abs/1909.03856}}.  The first
+focuses on the task of inference on high-resolution fundus images for which
+only a limited set of ground-truth data is publicly available.  We showed that
+simple transformation techniques like rescaling, padding and cropping of
+combined lower-resolution source datasets to the resolution and spatial
+composition of a higher-resolution target dataset can be a surprisingly
+effective way to improve segmentation quality in unseen conditions.  Our
+results show competitive performance on a set of common public retinal vessel
+datasets using a small and light-weight neural network.  For HRF, the only very
+high-resolution dataset currently available, we reach new state-of-the-art
+(SOTA) performance by solely relying on training images from lower-resolution
+datasets.   In comparison to previous works, we note that our approach achieves
+comparable performance without utilizing any training images of the target-set,
+solely relying on the remaining publicly available datasets for training. Given
+the stark differences in color, illumination, brightness and spatial
+composition between datasets this is an encouraging result and illustrates the
+robustness of our approach.
+
+The second gap concerns reported metrics in available reading material.  We
+emphasized the need for a more rigorous and detailed focus on evaluation, and
+proposed a set of plots and metrics that give additional insights into model
+performance.  We propose to use the standard deviation as a proxy for the
+confidence on the estimation of the average F1-score.  We demonstrated via
+tables and plots how to take advantage of that information, throwing a new
+light over some published benchmarks.  We argue the performance of many
+contributions available in literature is actually quite comparable within
+standard deviation margins of each other, in spite of huge differences in the
+number of parameters for different architectures.  Lastly, we made our findings
+reproducible, distributing code and documentation for future researchers to
+build upon, in the hopes to inspire future work in the
+field\footnote{https://gitlab.idiap.ch/bob/bob.ip.binseg}.
+
+This work is young and only recently publish on arXiv, but constitutes
+important exploratory ground for the work to be developed in the context of
+this proposal.  It was inspired by the 2018's version of this proposal and
+developed in partnership with an intern at Idiap.
 
 \end{document}
 
