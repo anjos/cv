@@ -71,12 +71,12 @@ years can be summarized as follows:
     presentations.  We showed this technique does not generalize well to unseen
     presentation attacks.  We explored, for the first time, alternate
     approaches by joint-modelling client identity as a way to calibrate PAD
-    output scores\footnote{See \textit{``On the use of client identity
+    output scores\footnote{See \textit{"On the use of client identity
     information for face anti-spoofing"}, Feb 2015", Access:,
     \url{http://publications.idiap.ch/index.php/publications/show/3069}},
     showing increased robustness to unseen attacks.  More recently, we also
     showed that solely modelling \textit{bona fide} presentations is also an
-    effective way to increased PAD robustness\footnote{See \textit{``On
+    effective way to increased PAD robustness\footnote{See \textit{"On
     Effectiveness of Anomaly Detection Approaches against Unseen Presentation
     Attacks in Face Anti-Spoofing"}, Feb. 2018, Access:
     \url{https://publidiap.idiap.ch/index.php/publications/show/3793}}.
@@ -84,7 +84,7 @@ years can be summarized as follows:
   \item Vulnerability Analysis and Evaluation: We demonstrated candidate
     presentation attack instruments and biometric recognition systems must
     undergo a vulnerability assessment to quantify the pertinence and quality
-    of attacks\footnote{See \textit{``Biometrics Evaluation under Spoofing
+    of attacks\footnote{See \textit{"Biometrics Evaluation under Spoofing
     Attacks"}, 2014, DOI:
     \url{https://publidiap.idiap.ch/index.php/publications/show/2922}}.  We
     also devised a way to tune protected biometric systems to various different
@@ -92,7 +92,7 @@ years can be summarized as follows:
 
   \item Visual and Multi-spectral PAD: Finally, we showed it is possible to
     add sensors to PAD systems to improve their robustness\footnote{See
-    \textit{``Face Recognition Systems Under Spoofing Attacks"}, Feb. 2016, DOI:
+    \textit{"Face Recognition Systems Under Spoofing Attacks"}, Feb. 2016, DOI:
     \url{http://dx.doi.org/10.1007/978-3-319-28501-6_8}}.
 
 \end{itemize}
@@ -112,7 +112,7 @@ We've been actively looking at the reproducibility of published work and how to
 lower the entrance barrier of publication readers, converting them into engaged
 users of methods we create.  We argue it is insufficient, in most cases, to
 only publish software leading to results if original data remains inaccessible.
-In particular\footnote{See \textit{``Continuously Reproducing Toolchains in
+In particular\footnote{See \textit{"Continuously Reproducing Toolchains in
 Pattern Recognition and Machine Learning Experiments"}, Aug. 2017, Access:
 \url{https://publications.idiap.ch/index.php/publications/show/3666}}, we note
 that reproducibility should imply in the following characteristics:
@@ -134,7 +134,7 @@ necessary equipment to perform the analysis.  To bridge this gap, we built an
 open platform for research\footnote{\url{https://www.beat-eu.org/platform}} in
 computational sciences related to pattern recognition and machine learning, to
 help on the development, reproducibility and certification of results obtained
-in the field\footnote{See \textit{``BEAT: An Open-Science Web Platform"}, Aug.
+in the field\footnote{See \textit{"BEAT: An Open-Science Web Platform"}, Aug.
 2017, Access:
 \url{https://publidiap.idiap.ch/index.php/publications/show/3665}}.  The BEAT
 platform is distributed under an open-source
@@ -143,7 +143,7 @@ license\footnote{\url{https://www.idiap.ch/software/beat/}}.
 Both projects are still active and support past and future work at Idiap and
 beyond.  We conducted (and will continue doing) lectures to both master and
 graduate students about reproducibility in data science (refer to the
-applicant's CV under the section ``Teaching" for details).  There are currently
+applicant's CV under the section "Teaching" for details).  There are currently
 $\sim$120 \textit{direct} citations to publications about Bob and BEAT core
 frameworks.
 
@@ -151,23 +151,24 @@ frameworks.
 \section{Semantic Segmentation for Medical Imaging}
 
 We identify and address three research gaps in the field of vessel segmentation
-for 2DFI\footnote{Access: \url{https://arxiv.org/abs/1909.03856}}.  The first
-focuses on the task of inference on high-resolution fundus images for which
-only a limited set of ground-truth data is publicly available.  We showed that
-simple transformation techniques like rescaling, padding and cropping of
-combined lower-resolution source datasets to the resolution and spatial
-composition of a higher-resolution target dataset can be a surprisingly
-effective way to improve segmentation quality in unseen conditions.  Our
-results show competitive performance on a set of common public retinal vessel
-datasets using a small and light-weight neural network.  For HRF, the only very
-high-resolution dataset currently available, we reach new state-of-the-art
-(SOTA) performance by solely relying on training images from lower-resolution
-datasets.   In comparison to previous works, we note that our approach achieves
-comparable performance without utilizing any training images of the target-set,
-solely relying on the remaining publicly available datasets for training. Given
-the stark differences in color, illumination, brightness and spatial
-composition between datasets this is an encouraging result and illustrates the
-robustness of our approach.
+for 2DFI\footnote{See \textit{"On the Evaluation and Real-World Usage Scenarios
+of Deep Vessel Segmentation for Funduscopy"}, Sep 2019", Access:
+\url{https://arxiv.org/abs/1909.03856}}.  The first focuses on the task of
+inference on high-resolution fundus images for which only a limited set of
+ground-truth data is publicly available.  We showed that simple transformation
+techniques like rescaling, padding and cropping of combined lower-resolution
+source datasets to the resolution and spatial composition of a
+higher-resolution target dataset can be a surprisingly effective way to improve
+segmentation quality in unseen conditions.  Our results show competitive
+performance on a set of common public retinal vessel datasets using a small and
+light-weight neural network.  For HRF, the only very high-resolution dataset
+currently available, we reach new state-of-the-art (SOTA) performance by solely
+relying on training images from lower-resolution datasets.   In comparison to
+previous works, we note that our approach achieves comparable performance
+without utilizing any training images of the target-set, solely relying on the
+remaining publicly available datasets for training. Given the stark differences
+in color, illumination, brightness and spatial composition between datasets
+this is an encouraging result and illustrates the robustness of our approach.
 
 The second gap concerns reported metrics in available reading material.  We
 emphasized the need for a more rigorous and detailed focus on evaluation, and
