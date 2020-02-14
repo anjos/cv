@@ -2,7 +2,7 @@ dist: xenial
 language: python
 
 python:
-  - "3.6"
+  - "3.8"
 
 addons:
   apt:
@@ -29,7 +29,7 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda config --add channels anjos
   - conda update -y -n base -q conda
-  - conda env create --quiet -f build.yml
+  - conda env create --quiet -f latex.yml
   - source activate cv
   - conda info -a
   - lualatex --version
