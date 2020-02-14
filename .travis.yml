@@ -30,7 +30,7 @@ install:
   - conda config --add channels anjos
   - conda update -y -n base -q conda
   - conda env create --quiet -f latex.yml
-  - source activate cv
+  - conda activate latex
   - conda info -a
   - lualatex --version
   - biber --version
