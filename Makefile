@@ -1,7 +1,7 @@
 # Created by Andre Anjos <andre.anjos@idiap.ch>
 # Wed 16 Jan 2013 18:00:08 CET
 
-MAINFILE=cv.tex snsf-cv.tex snsf-research-output.tex snsf-achievements.tex
+MAINFILE=cv.tex snsf-cv.tex snsf-research-output.tex snsf-achievements.tex euraxess-cv.tex
 PDFFILE=$(MAINFILE:%.tex=%.pdf)
 
 .PHONY : FORCE_MAKE filtered.bib clean

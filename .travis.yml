@@ -35,7 +35,7 @@ install:
   - biber --version
 
 script:
-  - make cv.pdf snsf-cv.pdf snsf-achievements.pdf
+  - make cv.pdf snsf-cv.pdf snsf-achievements.pdf euraxess-cv.pdf
   - mkdir builds
   - cp cv.pdf builds
   - cp publications.bib builds
