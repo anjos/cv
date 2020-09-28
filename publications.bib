@@ -1,6 +1,21 @@
 %%%%%%%%%%%%
-%%  2019  %%
+%%  2020  %%
 %%%%%%%%%%%%
+
+@misc{arxiv-2020,
+	title = {The Little W-Net That Could: State-of-the-Art Retinal Vessel Segmentation with Minimalistic Models},
+	author = {Galdran, Adrian and Anjos, André and Dolz, José and Chakor, Hadi and Lombaert, Hervé and Ayed, Ismail Ben},
+	year = {2020},
+    month = 9,
+	eprinttype = {arxiv},
+    eprint        = {2009.01907},
+    archivePrefix = {arXiv},
+    primaryClass  = {cs.CV},
+	journaltitle = {{arXiv}:2009.01907 [cs, eess] (submitted to IEEE Trans.  Medical Imaging)},
+    url           = {https://arxiv.org/abs/2009.01907},
+    pdf           = {https://arxiv.org/pdf/2009.01907},
+	abstract = {The segmentation of the retinal vasculature from eye fundus images represents one of the most fundamental tasks in retinal image analysis. Over recent years, increasingly complex approaches based on sophisticated Convolutional Neural Network architectures have been slowly pushing performance on well-established benchmark datasets. In this paper, we take a step back and analyze the real need of such complexity. Specifically, we demonstrate that a minimalistic version of a standard UNet with several orders of magnitude less parameters, carefully trained and rigorously evaluated, closely approximates the performance of current best techniques. In addition, we propose a simple extension, dubbed W-Net, which reaches outstanding performance on several popular datasets, still using orders of magnitude less learnable weights than any previously published approach. Furthermore, we provide the most comprehensive cross-dataset performance analysis to date, involving up to 10 different databases. Our analysis demonstrates that the retinal vessel segmentation problem is far from solved when considering test images that differ substantially from the training data, and that this task represents an ideal scenario for the exploration of domain adaptation techniques. In this context, we experiment with a simple self-labeling strategy that allows us to moderately enhance cross-dataset performance, indicating that there is still much room for improvement in this area. Finally, we also test our approach on the Artery/Vein segmentation problem, where we again achieve results well-aligned with the state-of-the-art, at a fraction of the model complexity in recent literature. All the code to reproduce the results in this paper is released.},
+}
 
 @article{compbiomed-2020,
 	title = {Competitive neural layer-based method to identify people with high risk for diabetic foot},
@@ -16,6 +31,10 @@
 	keywords = {Artificial neural network, Diabetes mellitus, Diabetic foot},
 }
 
+%%%%%%%%%%%%
+%%  2019  %%
+%%%%%%%%%%%%
+
 @misc{arxiv-2019,
    title         = {On the Evaluation and Real-World Usage Scenarios of Deep Vessel Segmentation for Retinography},
    author        = {Tim Laibacher and Andr\'e Anjos},
@@ -26,6 +45,7 @@
    primaryClass  = {cs.CV},
    url           = {https://arxiv.org/abs/1909.03856},
    pdf           = {https://arxiv.org/pdf/1909.03856},
+   journaltitle = {{arXiv}:1909.03856 [cs] (submitted to IEEE International Symposium on Biomedical Imaging 2021)},
    abstract = {We identify and address three research gaps in the field of vessel segmentation for retinography.  The first focuses on the task of inference on high-resolution fundus images for which only a limited set of ground-truth data is publicly available.  Notably, we highlight that simple rescaling and padding or cropping of lower resolution datasets is surprisingly effective.  We further explore the effectiveness of semi-supervised learning for better domain adaptation in this context.  Our results show competitive performance on a set of common public retina datasets, using a small and light-weight neural network.  For HRF, the only very high-resolution dataset currently available, we reach comparable, if not superior, state-of-the-art performance by solely relying on training images from lower-resolution datasets.  The second topic we address concerns the lack of standardisation in evaluation metrics.  We investigate the variability of the F1-score on the existing datasets and report results for recently published architectures.  Our evaluation show that most reported results are actually comparable to each other in performance.  Finally, we address the issue of reproducibility, by open-sourcing the complete framework used to produce results shown here.},
 }
 

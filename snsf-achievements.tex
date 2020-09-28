@@ -11,6 +11,10 @@
 \usepackage{newpxtext} \usepackage[euler-digits]{eulervm} %Palatino-like
 %\usepackage{libertine} \usepackage[libertine]{newtxmath} %Libertine-like
 
+% sorting=none will preserve the bib file order
+\usepackage[style=verbose-ibid,backend=biber,sorting=none,maxbibnames=3]{biblatex}
+\addbibresource{publications.bib}
+
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
 
@@ -52,59 +56,53 @@ urlcolor=black
 % documents/sources of the various achievements should be made available to the
 % evaluators via a direct open access web-link.
 
-\title{Major Scientific Achievements (Dr. André Anjos)}
+\title{Scientific Achievements (Dr. André Anjos)}
 \maketitle
 
-\section{Biometric Anti-Spoofing}
+\section{Semantic Segmentation for Medical Imaging}
 
-We advanced the state-of-the-art in presentation attack detection (PAD) through
-various contributions, ranging from the exploration of different methods to
-address PAD and assess biometric recognition vulnerabilities, to publishing
-articles and book chapters, datasets and software for easy reproducibility of
-claimed results.  My contributions to biometric anti-spoofing in the past five
-years can be summarized as follows:
+Since the introduction of U-Nets in 2015, the field of medical image
+segmentation has seen renewed interest bringing in a variety of fully
+convolutional (deep) neural network (FCN) architectures for binary and
+multi-class segmentation problems promising very attractive results, with
+applications in computed tomography, retinography, and histopathology to cite a
+few.  Despite the incredible progress, the lack of annotated images (due to
+cost), and rigor in the comparison of trained models has led the community to
+believe larger and more dense networks provide better results.  This is
+particularly noticeable in ophtalmological images such as those from
+bi-dimensional eye fundus photography (retinography).  While retinography is
+not used for precision diagnosis, it remains cheap and very effective means for
+mass screening.  Semantical segmentation of eye fundus structures plays a key
+role in this process.
 
-\begin{itemize}
+I tried to address these gaps in two different ways.  The
+first\footcite{arxiv-2019} was to conduct and publish rigorous (open source,
+reproducible) benchmarks with popular retinography datasets and
+state-of-the-art FCN models in which we: i) showed that simple transformation
+techniques like rescaling, padding and cropping of combined lower-resolution
+source datasets to the resolution and spatial composition of a
+higher-resolution target dataset can be a surprisingly effective way to improve
+segmentation quality in unseen conditions; ii) we proposed a set of plots and
+metrics that give additional insights into model performance and demonstrated
+via tables and plots how to take advantage of that information, throwing a new
+light over some published benchmarks.  We argue the performance of many
+contributions available in literature is actually quite comparable within
+standard deviation margins of each other, in spite of huge differences in the
+number of parameters for different architectures.  Finally, we made our
+findings reproducible, distributing code and documentation for future
+researchers to build upon, in the hopes to inspire future work in the
+field\footnote{https://gitlab.idiap.ch/bob/bob.ip.binseg}.
 
-  \item Anomaly Detection and Robustness: Most PAD systems work
-    discriminatively, trying to separate attacks from \textit{bona fide}
-    presentations.  We showed this technique does not generalize well to unseen
-    presentation attacks.  We explored, for the first time, alternate
-    approaches by joint-modelling client identity as a way to calibrate PAD
-    output scores\footnote{See \textit{"On the use of client identity
-    information for face anti-spoofing"}, Feb 2015", Access:,
-    \url{http://publications.idiap.ch/index.php/publications/show/3069}},
-    showing increased robustness to unseen attacks.  More recently, we also
-    showed that solely modelling \textit{bona fide} presentations is also an
-    effective way to increased PAD robustness\footnote{See \textit{"On
-    Effectiveness of Anomaly Detection Approaches against Unseen Presentation
-    Attacks in Face Anti-Spoofing"}, Feb. 2018, Access:
-    \url{https://publidiap.idiap.ch/index.php/publications/show/3793}}.
-
-  \item Vulnerability Analysis and Evaluation: We demonstrated candidate
-    presentation attack instruments and biometric recognition systems must
-    undergo a vulnerability assessment to quantify the pertinence and quality
-    of attacks\footnote{See \textit{"Biometrics Evaluation under Spoofing
-    Attacks"}, 2014, DOI:
-    \url{https://publidiap.idiap.ch/index.php/publications/show/2922}}.  We
-    also devised a way to tune protected biometric systems to various different
-    applications, with changing security requirements.
-
-  \item Visual and Multi-spectral PAD: Finally, we showed it is possible to
-    add sensors to PAD systems to improve their robustness\footnote{See
-    \textit{"Face Recognition Systems Under Spoofing Attacks"}, Feb. 2016, DOI:
-    \url{http://dx.doi.org/10.1007/978-3-319-28501-6_8}}.
-
-\end{itemize}
-
-This work was published as book chapters, international peer-reviewed
-scientific journals (including 2 articles at IEEE Transactions on Information
-Forensics and Security with an impact factor of 4.3) and in peer-reviewed
-conference papers totalling about 200 citations.  Accompanying software
-packages for such contributions were released publicly, under an open-source
-license. For details and more links, please refer to the applicant's Research
-Output.
-
+In a second contribution\footcite{arxiv-2020} we propose that a minimalistic
+version of a standard U-Net with 3 orders of magnitude less parameters,
+carefully trained and rigorously evaluated, closely approximates the
+state-of-the-art performance in vessel segmentation for retinography.  In
+addition, we propose a simple extension, dubbed W-Net, by concatenating two
+U-Nets together, which reaches outstanding performance on several popular
+datasets, still using orders of magnitude less learnable weights than any
+previously published approach.  This work also provide a very comprehensive
+intra and cross-dataset performance analysis, involving up to 10 different
+databases, including artery/vein multi-class semantic segmentation.
 
 \section{Reproducible Research}
 
@@ -112,18 +110,15 @@ We've been actively looking at the reproducibility of published work and how to
 lower the entrance barrier of publication readers, converting them into engaged
 users of methods we create.  We argue it is insufficient, in most cases, to
 only publish software leading to results if original data remains inaccessible.
-In particular\footnote{See \textit{"Continuously Reproducing Toolchains in
-Pattern Recognition and Machine Learning Experiments"}, Aug. 2017, Access:
-\url{https://publications.idiap.ch/index.php/publications/show/3666}}, we note
-that reproducibility should imply in the following characteristics:
-repeatability, shareability, extensibility and stability, which is not
-guaranteed by most published material to date.  We proposed a software suite
-called Bob (\url{https://www.idiap.ch/software/bob}) that possesses such
-characteristics, demonstrating its flexibility to various tasks including
-Biometric Person Recognition (\url{https://gitlab.idiap.ch/bob/bob.bio.base}),
-Presentation Attack Detection (\url{https://gitlab.idiap.ch/bob/bob.pad.base}),
-Remote Photoplethysmography (\url{https://gitlab.idiap.ch/bob/bob.rppg.base}),
-Speech Processing (\url{https://gitlab.idiap.ch/bob/bob.kaldi}).  All
+In particular\footcite{icml-2017-2}, we note that reproducibility should imply
+in the following characteristics: repeatability, shareability, extensibility
+and stability, which is not guaranteed by most published material to date.  We
+proposed a software suite called Bob (\url{https://www.idiap.ch/software/bob})
+that possesses such characteristics, demonstrating its flexibility to various
+tasks including Medical Image Segmentation
+(\url{https://gitlab.idiap.ch/bob/bob.ip.binseg}), Remote Photoplethysmography
+(\url{https://gitlab.idiap.ch/bob/bob.rppg.base}), and Biometric Person
+Recognition (\url{https://gitlab.idiap.ch/bob/bob.bio.base}).  All
 contributions are distributed under an open-source license.
 
 From another perspective, there are legitimate cases in which raw data leading
@@ -134,60 +129,59 @@ necessary equipment to perform the analysis.  To bridge this gap, we built an
 open platform for research\footnote{\url{https://www.beat-eu.org/platform}} in
 computational sciences related to pattern recognition and machine learning, to
 help on the development, reproducibility and certification of results obtained
-in the field\footnote{See \textit{"BEAT: An Open-Science Web Platform"}, Aug.
-2017, Access:
-\url{https://publidiap.idiap.ch/index.php/publications/show/3665}}.  The BEAT
-platform is distributed under an open-source
-license\footnote{\url{https://www.idiap.ch/software/beat/}}.
+in the field\footcite{icml-2017-1}.  The BEAT platform is distributed under an
+open-source license\footnote{\url{https://www.idiap.ch/software/beat/}}.
 
 Both projects are still active and support past and future work at Idiap and
 beyond.  We conducted (and will continue doing) lectures to both master and
 graduate students about reproducibility in data science (refer to the
 applicant's CV under the section "Teaching" for details).  There are currently
-$\sim$120 \textit{direct} citations to publications about Bob and BEAT core
+$\sim$180 \textit{direct} citations to publications about Bob and BEAT core
 frameworks.
 
+\section{Biometric Recognition}
 
-\section{Semantic Segmentation for Medical Imaging}
+We advanced the state-of-the-art in presentation attack detection (PAD) through
+various contributions, ranging from the exploration of different methods to
+address PAD and assess biometric recognition vulnerabilities, to publishing
+articles and book chapters, datasets and software for easy reproducibility of
+claimed results.  Whilst not directly related to the proposal at hand, various
+elements in this work may be re-used in the proposed research direction, and I
+therefore report them here.
 
-We identify and address three research gaps in the field of vessel segmentation
-for 2DFI\footnote{See \textit{"On the Evaluation and Real-World Usage Scenarios
-of Deep Vessel Segmentation for Funduscopy"}, Sep 2019", Access:
-\url{https://arxiv.org/abs/1909.03856}}.  The first focuses on the task of
-inference on high-resolution fundus images for which only a limited set of
-ground-truth data is publicly available.  We showed that simple transformation
-techniques like rescaling, padding and cropping of combined lower-resolution
-source datasets to the resolution and spatial composition of a
-higher-resolution target dataset can be a surprisingly effective way to improve
-segmentation quality in unseen conditions.  Our results show competitive
-performance on a set of common public retinal vessel datasets using a small and
-light-weight neural network.  For HRF, the only very high-resolution dataset
-currently available, we reach new state-of-the-art (SOTA) performance by solely
-relying on training images from lower-resolution datasets.   In comparison to
-previous works, we note that our approach achieves comparable performance
-without utilizing any training images of the target-set, solely relying on the
-remaining publicly available datasets for training. Given the stark differences
-in color, illumination, brightness and spatial composition between datasets
-this is an encouraging result and illustrates the robustness of our approach.
+My contributions to biometric anti-spoofing can be summarized as follows:
 
-The second gap concerns reported metrics in available reading material.  We
-emphasized the need for a more rigorous and detailed focus on evaluation, and
-proposed a set of plots and metrics that give additional insights into model
-performance.  We propose to use the standard deviation as a proxy for the
-confidence on the estimation of the average F1-score.  We demonstrated via
-tables and plots how to take advantage of that information, throwing a new
-light over some published benchmarks.  We argue the performance of many
-contributions available in literature is actually quite comparable within
-standard deviation margins of each other, in spite of huge differences in the
-number of parameters for different architectures.  Lastly, we made our findings
-reproducible, distributing code and documentation for future researchers to
-build upon, in the hopes to inspire future work in the
-field\footnote{https://gitlab.idiap.ch/bob/bob.ip.binseg}.
+\begin{itemize}
 
-This work is young and only recently publish on arXiv, but constitutes
-important exploratory ground for the work to be developed in the context of
-this proposal.  It was inspired by the 2018's version of this proposal and
-developed in partnership with an intern at Idiap.
+  \item Anomaly Detection and Robustness: Most PAD systems work
+      discriminatively, trying to separate attacks from \textit{bona fide}
+      presentations.  We showed this technique does not generalize well to
+      unseen presentation attacks.  We explored, for the first time, alternate
+      approaches by joint-modelling client identity as a way to calibrate PAD
+      output scores\footcite{tifs-2015}, showing increased robustness to unseen
+      attacks.  More recently, we also showed that solely modelling
+      \textit{bona fide} presentations is also an effective way to increased
+      PAD robustness\footcite{icb-2018}.
+
+  \item Vulnerability Analysis and Evaluation: We demonstrated candidate
+      presentation attack instruments and biometric recognition systems must
+      undergo a vulnerability assessment to quantify the pertinence and quality
+      of attacks\footcite{tifs-2014}.  We also devised a way to tune protected
+      biometric systems to various different applications, with changing
+      security requirements.
+
+  \item Visual and Multi-spectral PAD: Finally, we showed it is possible to add
+      sensors to PAD systems to improve their robustness\footcite{tifs-2019-2}.
+
+\end{itemize}
+
+This work was published as book chapters, international peer-reviewed
+scientific journals (including articles at IEEE Transactions on Information
+Forensics and Security with an impact factor of 4.3) and in peer-reviewed
+conference papers totalling a few thousand citations.  Accompanying software
+packages for such contributions were released publicly, under an open-source
+license. For details and more links, please refer to the applicant's Research
+Output.
 
 \end{document}
 
