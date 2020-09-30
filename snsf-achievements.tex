@@ -16,7 +16,7 @@
 \addbibresource{publications.bib}
 
 % adjust the page margins
-\usepackage[scale=0.8]{geometry}
+\usepackage[scale=0.82]{geometry}
 
 \usepackage{hyperref}
 \usepackage{titling}
@@ -104,6 +104,67 @@ previously published approach.  This work also provide a very comprehensive
 intra and cross-dataset performance analysis, involving up to 10 different
 databases, including artery/vein multi-class semantic segmentation.
 
+\section{Contributions to Computer Vision and Deep Learning in Biometrics}
+
+I have actively worked in computer vision and deep learning (mostly) associated
+to biometric recognition, with potential application to various other tasks.
+Contributions range from the collection of datasets, the exploration of
+different methods to address and assess biometric recognition vulnerabilities,
+domain adaptation, and remote photoplethysmography.
+
+While I have worked in various contributions, I highlight here key publications
+from the past 5 years that may related to the proposal.
+
+\begin{itemize}
+
+    \item Domain Specific Units (Adaptation): In~\footcite{tifs-2019}, we apply
+        domain adaptation via dedicated Domain-Specific Units (DSU), with an
+        application to Heterogeneous Face Recognition.  In this class of
+        problems, one wants to recognize an individual across different
+        spectral data,  based on the representation on a principal spectrum
+        (e.g., visual).  It is a challenging task because multi-spectral data
+        for covering large populations is rare, which in turn stymies the
+        training of deep convolution-based architectures for this task.  We
+        developed a mechanism to adapt the parameters of models pre-trained on
+        large visual spectral face recognition datasets, which are readily
+        available.  My contributions are directly related to core idea of this
+        work.
+
+  \item Anomaly Detection and Robustness: Biometric recognition systems are
+      exposed to presentation attacks, and dectectors (PAD) for this purpose
+      are required building blocks of thrustworthy systems.  Most PAD systems
+      work discriminatively, trying to separate attacks from \textit{bona fide}
+      presentations.  We showed this technique does not generalize well to
+      unseen presentation attacks.  We explored, for the first time, alternate
+      approaches by joint-modelling client identity as a way to calibrate PAD
+      output scores\footcite{tifs-2015}, showing increased robustness to unseen
+      attacks.  More recently, we also showed that solely modelling
+      \textit{bona fide} presentations is also an effective way to increased
+      PAD robustness\footcite{icb-2018}.  Finally, we showed that by adding
+      heterogenous inputs to PAD systems can improve their
+      robustness\footcite{tifs-2019-2} to achieve state-of-the-art performance,
+      even to unseen conditions during training.
+
+  \item Remote Photoplethysmography (rPPG):  This study\footcite{arxiv-2017-2}
+      tackles the problem of reproducibility in rPPG. To date, most of the work
+      published in this domain was assessed on privately-owned databases,
+      making it difficult to evaluate proposed algorithms.   We introduded a
+      new, publicly available dataset containing a relatively large number of
+      subjects recorded under two different lighting conditions.  We then
+      thoroughly benchmarked state-of-the-art algorithms using an unbiased
+      experimental evaluation in various settings.  We showed that none of the
+      selected algorithms is precise enough to be used in a real-world
+      scenario.
+
+\end{itemize}
+
+This work was published as book chapters, international peer-reviewed
+scientific journals (including articles at very high-impact factor journals)
+and in peer-reviewed conference papers totalling a few thousand citations.
+Accompanying software packages for such contributions were released publicly,
+under an open-source license. For details and more links, please refer to the
+applicant's Research Output.
+
 \section{Reproducible Research}
 
 We've been actively looking at the reproducibility of published work and how to
@@ -113,13 +174,12 @@ only publish software leading to results if original data remains inaccessible.
 In particular\footcite{icml-2017-2}, we note that reproducibility should imply
 in the following characteristics: repeatability, shareability, extensibility
 and stability, which is not guaranteed by most published material to date.  We
-proposed a software suite called Bob (\url{https://www.idiap.ch/software/bob})
-that possesses such characteristics, demonstrating its flexibility to various
-tasks including Medical Image Segmentation
-(\url{https://gitlab.idiap.ch/bob/bob.ip.binseg}), Remote Photoplethysmography
-(\url{https://gitlab.idiap.ch/bob/bob.rppg.base}), and Biometric Person
-Recognition (\url{https://gitlab.idiap.ch/bob/bob.bio.base}).  All
-contributions are distributed under an open-source license.
+proposed an open-source software suite called Bob
+(\url{https://www.idiap.ch/software/bob}) that possesses such characteristics,
+demonstrating its flexibility to various tasks including Medical Image
+Segmentation (\url{https://gitlab.idiap.ch/bob/bob.ip.binseg}), Remote
+Photoplethysmography (\url{https://gitlab.idiap.ch/bob/bob.rppg.base}), and
+Biometric Person Recognition (\url{https://gitlab.idiap.ch/bob/bob.bio.base}).
 
 From another perspective, there are legitimate cases in which raw data leading
 to research conclusions cannot be published.  Furthermore, in a growing number
@@ -138,50 +198,6 @@ graduate students about reproducibility in data science (refer to the
 applicant's CV under the section "Teaching" for details).  There are currently
 $\sim$180 \textit{direct} citations to publications about Bob and BEAT core
 frameworks.
-
-\section{Biometric Recognition}
-
-We advanced the state-of-the-art in presentation attack detection (PAD) through
-various contributions, ranging from the exploration of different methods to
-address PAD and assess biometric recognition vulnerabilities, to publishing
-articles and book chapters, datasets and software for easy reproducibility of
-claimed results.  Whilst not directly related to the proposal at hand, various
-elements in this work may be re-used in the proposed research direction, and I
-therefore report them here.
-
-My contributions to biometric anti-spoofing can be summarized as follows:
-
-\begin{itemize}
-
-  \item Anomaly Detection and Robustness: Most PAD systems work
-      discriminatively, trying to separate attacks from \textit{bona fide}
-      presentations.  We showed this technique does not generalize well to
-      unseen presentation attacks.  We explored, for the first time, alternate
-      approaches by joint-modelling client identity as a way to calibrate PAD
-      output scores\footcite{tifs-2015}, showing increased robustness to unseen
-      attacks.  More recently, we also showed that solely modelling
-      \textit{bona fide} presentations is also an effective way to increased
-      PAD robustness\footcite{icb-2018}.
-
-  \item Vulnerability Analysis and Evaluation: We demonstrated candidate
-      presentation attack instruments and biometric recognition systems must
-      undergo a vulnerability assessment to quantify the pertinence and quality
-      of attacks\footcite{tifs-2014}.  We also devised a way to tune protected
-      biometric systems to various different applications, with changing
-      security requirements.
-
-  \item Visual and Multi-spectral PAD: Finally, we showed it is possible to add
-      sensors to PAD systems to improve their robustness\footcite{tifs-2019-2}.
-
-\end{itemize}
-
-This work was published as book chapters, international peer-reviewed
-scientific journals (including articles at IEEE Transactions on Information
-Forensics and Security with an impact factor of 4.3) and in peer-reviewed
-conference papers totalling a few thousand citations.  Accompanying software
-packages for such contributions were released publicly, under an open-source
-license. For details and more links, please refer to the applicant's Research
-Output.
 
 \end{document}
 
