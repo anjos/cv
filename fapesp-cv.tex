@@ -1,0 +1,145 @@
+\typeout{ ====================================================================}
+\typeout{ This is file euraxess-cv, created at Mon 14 May 11:45:34 2018 CEST  }
+\typeout{ Andre Anjos <andre.anjos@idiap.ch>                                  }
+\typeout{ ====================================================================}
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\usepackage[T1]{fontenc}
+
+% styles: 'casual' (default), 'classic', 'oldstyle','banking'
+\moderncvstyle{casual}
+
+% colors: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey', 'black'
+\moderncvcolor{blue}
+
+% sorting=none will preserve the bib file order
+\usepackage{csquotes}
+\usepackage[backend=biber,maxbibnames=99,bibstyle=publist,plauthorhandling=highlight,marginyear=false,plnumbered=false,sorting=ddnt]{biblatex}
+\setlength\bibitemsep{1.5\itemsep}
+\plauthorname[André]{Anjos}
+
+\addbibresource{fapesp.bib}
+
+% adjust the page margins
+\usepackage[margin=2cm,left=2.5cm]{geometry}
+% if you want to change the width of the column with the dates
+%\setlength{\hintscolumnwidth}{3cm}
+
+% for the 'classic' style, if you want to force the width allocated to your
+% name and avoid line breaks. be careful though, the length is normally
+% calculated to avoid any overlap with your personal info; use this at your own
+% typographical risks...
+
+%\setlength{\makecvtitlenamewidth}{10cm}
+
+% hyperref setup
+\definecolor{linkcolor}{rgb}{0.1,0.1,0.4}
+
+\AfterPreamble{\hypersetup{
+  pdfauthor={Andre Anjos},
+  pdftitle={Short Curriculum Vitae for Andre Anjos},
+  pdfsubject={Short Curriculum Vitae for Andre Anjos},
+  urlcolor=blue,
+  colorlinks=true,    % false: boxed links; true: colored links
+  linkcolor=linkcolor, % color of internal links (change box color with linkbordercolor)
+  citecolor=linkcolor, % color of links to bibliography
+  filecolor=linkcolor, % color of file links
+  urlcolor=linkcolor   % color of external links
+}}
+
+% personal data
+\firstname{André}
+\familyname{Anjos}
+
+% optional, remove / comment the line if not wanted
+\address{Idiap Research Institute, rue Marconi 19, Centre du Parc, Martigny,
+Switzerland, CH-1920}{}
+
+% optional, remove / comment the line if not wanted
+\phone{+41277217763}
+
+% optional, remove / comment the line if not wanted
+\email{andre.anjos@idiap.ch}
+
+% optional, remove / comment the line if not wanted
+\homepage{andreanjos.org}
+
+% optional, remove / comment the line if not wanted
+%\extrainfo{}
+
+% optional, remove / comment the line if not wanted
+%\quote{Some quote}
+
+\begin{document}
+
+\section{André Anjos -- Researcher, Head of Biosignal Processing Group}
+
+André Anjos received his Ph.D. degree in signal processing from the Federal
+University of Rio de Janeiro in 2006. He joined the ATLAS Experiment at
+European Centre for Particle Physics (CERN, Switzerland) from 2001 until 2010
+where he worked in the development and deployment of the Trigger and Data
+Acquisition systems that are nowadays powering the discovery of the Higgs
+boson. During his time at CERN, André studied the application of neural
+networks and statistical methods for particle recognition at the trigger level
+and developed several software components still in use today. In 2010, André
+joined the Biometrics Security and Privacy Group at the Idiap Research
+Institute where he worked with face and vein biometrics, presentation attack
+detection, and reproducibility in research. Since 2018 André heads the
+Biosignal Processing Group at Idiap. His current research interests include
+medical applications, biometrics, image and signal processing, machine
+learning, research reproducibility and open science. Among André's open-source
+contributions, one can cite Bob and the the BEAT framework for evaluation and
+testing of machine learning systems. He teaches graduate-level machine learning
+courses at the École Polytechnique Fédérale de Lausanne (EPFL) and master
+courses at Idiap's Master of AI. He serves as reviewer for various scientific
+journals in pattern recognition, machine learning, and image.
+
+\input{education}
+
+\section{Professional experience}
+
+\cventry{2018--}{Permanent Researcher}{}{Idiap Research Institute, Martigny, Switzerland}{}{Head of the Biosignal Processing Group.}
+
+\cventry{2014--2018}{Research Associate}{}{Idiap Research Institute, Martigny, Switzerland}{}{Research on Biometrics, Security and Computing.}
+
+\cventry{2010--2013}{Post-doctoral Researcher}{}{Idiap Research Institute, Martigny, Switzerland}{}{Research on Biometrics, Security and Computing.}
+
+\cventry{2004--2010}{Researcher}{}{University of Wisconsin, Madison, USA}{}{Development and construction of the ATLAS Trigger and Data-Acquisition Systems, at \href{http://www.cern.ch}{CERN}, Switzerland.}
+
+\renewcommand{\refname}{Relevant Publications}
+\nocite{*}
+\printbibliography
+
+\section{Current Research Grants}
+
+
+\cventry{2019--2022}{EU H2020 "AI4EU"}{PI: Patrick Gatelier (Thales SA, FR)}{My role: Partner}{}{Budget: 20'000'000 EUR (419'621 CHF for Idiap)}
+
+\cventry{2019--2022}{EU CHIST-ERA "LEARN-REAL"}{PI: Sylvain Calinon (Idiap, CH)}{My role: Co-PI}{}{Budget: 775'837 CHF (250'000 CHF for Idiap)}
+
+\cventry{2018--2020}{EU CHIST-ERA "ALLIES"}{PI: Anthony Larcher (UNIMANS, FR)}{My role: Partner}{}{Budget: 496'620CHF (496'620 CHF for Idiap)}
+
+\section{Current Student Supervisions}
+
+\cventry{2020--2021}{Geoffrey Raposo}{Master thesis: \textit{Active tuberculosis exclusion from frontal chest X-ray images}}{}{}{}
+
+\cventry{2019--2020}{Colombine Verzat}{Master thesis: \textit{Machine Learning for Adverse Event Detection in Latent Tuberculosis Infection Treatment}}{}{}{}
+
+\section{Academic Indicators}
+
+\cventry{1}{Peer-Reviewed Journals}{28}{}{}{}
+\cventry{2}{Peer-Reviewed Conferences}{58}{}{}{}
+\cventry{3}{Book Chapters}{9}{}{}{}
+\cventry{4}{Master Thesis}{3}{}{}{}
+\cventry{5}{Ph.D Thesis}{1}{}{}{}
+\cventry{6}{Citations}{+19000 (h-index: 25)}{}{}{}
+\cventry{7}{Patents}{3}{}{}{}
+
+\section{Links}
+
+\cventry{}{Google Scholar}{\url{https://scholar.google.com/citations?user=pAfLhMoAAAAJ}}{}{}{}{}
+\cventry{}{ORCID}{\url{https://orcid.org/0000-0001-7248-4014}}{}{}{}{}
+
+\end{document}
+
+\typeout{ *************** End of file cv *************** }
