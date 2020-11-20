@@ -1,0 +1,119 @@
+\typeout{ ====================================================================}
+\typeout{ This is file snsf-achievements, created at Mon 14 May 11:45:34 2018 CEST }
+\typeout{ Andre Anjos <andre.anjos@idiap.ch>                                  }
+\typeout{ ====================================================================}
+
+\documentclass[a4paper,10pt,onecolumn]{article}
+\usepackage[T1]{fontenc}
+
+% Choose your font here - combinations with harmonized math symbols suggested
+%\usepackage{lmodern} %Times-like
+\usepackage{newpxtext} \usepackage[euler-digits]{eulervm} %Palatino-like
+%\usepackage{libertine} \usepackage[libertine]{newtxmath} %Libertine-like
+
+% sorting=none will preserve the bib file order
+\usepackage[style=verbose-ibid,backend=biber,sorting=none,maxbibnames=3]{biblatex}
+\addbibresource{publications.bib}
+
+% adjust the page margins
+\usepackage[scale=0.82]{geometry}
+
+\usepackage{hyperref}
+\usepackage{titling}
+
+\pretitle{\vspace{-6em}\begin{flushleft}\LARGE}
+\posttitle{\par\end{flushleft}}
+\preauthor{}
+\postauthor{}
+\author{}
+\predate{}
+\postdate{}
+\date{}
+
+\hypersetup{
+backref,%
+colorlinks,%
+citecolor=black,%
+filecolor=black,%
+linkcolor=black,%
+urlcolor=black
+}
+
+
+\begin{document}
+
+% List up to three major scientific achievements in the career of each
+% applicant and briefly describe the individual applicant's specific
+% contribution and the impact of his/her work. Each list should not exceed one
+% DIN A4 page.
+
+\title{Scientific Achievements (Dr. André Anjos)}
+\maketitle
+
+\section{Semantic Segmentation for Medical Imaging}
+
+Since the introduction of U-Nets in 2015, the field of medical image
+segmentation has seen renewed interest bringing in a variety of fully
+convolutional (deep) neural network (FCN) architectures for binary and
+multi-class segmentation problems promising very attractive results, with
+applications in computed tomography, retinography, and histopathology to cite a
+few.  Despite the incredible progress, the lack of annotated images (due to
+cost), and rigor in the comparison of trained models has led the community to
+believe larger and more dense networks provide better results.
+
+I tried to address these gaps in two different ways.  The
+first\footcite{arxiv-2019} was to conduct and publish rigorous (open source,
+reproducible) benchmarks with popular retinography datasets and
+state-of-the-art FCN models in which we: i) showed that simple transformation
+techniques can be a surprisingly effective way to improve segmentation quality
+in unseen conditions; ii) we proposed a set of plots and metrics that give
+additional insights into model performance and demonstrated via tables and
+plots how to take advantage of that information, throwing a new light over some
+published benchmarks\footnote{\url{https://gitlab.idiap.ch/bob/bob.ip.binseg}}.
+In a second contribution\footcite{arxiv-2020} we propose that a minimalistic
+version of a standard U-Net with 3 orders of magnitude less parameters,
+carefully trained and rigorously evaluated, closely approximates the
+state-of-the-art performance in vessel segmentation for retinography.
+
+\section{Contributions to Computer Vision and Deep Learning in Biometrics}
+
+I have actively worked in computer vision and deep learning (mostly) associated
+to biometric recognition, with potential application to various other tasks.
+Contributions range from the collection of datasets, the exploration of
+different methods to address and assess biometric recognition vulnerabilities,
+domain adaptation, and remote photoplethysmography.
+
+While I have worked in various contributions, I highlight here key
+contributions.  Domain Specific Units (Adaptation): In~\footcite{tifs-2019}, we
+apply domain adaptation via dedicated Domain-Specific Units (DSU), with an
+application to Heterogeneous Face Recognition.  We developed a mechanism to
+adapt the parameters of models pre-trained on large visual spectral face
+recognition datasets, which are readily available.  My contributions are
+directly related to core idea of this work.  Remote Photoplethysmography
+(rPPG):  This study\footcite{arxiv-2017-2} tackles the problem of
+reproducibility in rPPG.  We introduded a new, publicly available dataset
+containing a relatively large number of subjects recorded under two different
+lighting conditions.  We then thoroughly benchmarked state-of-the-art
+algorithms using an unbiased experimental evaluation in various settings.  We
+showed that none of the selected algorithms is precise enough to be used in a
+real-world scenario.
+
+\section{Reproducible Research}
+
+We've been actively looking at the reproducibility of published work and how to
+lower the entrance barrier of publication readers, converting them into engaged
+users of methods we create.  We argue it is insufficient, in most cases, to
+only publish software leading to results if original data remains inaccessible.
+In particular\footcite{icml-2017-1}, we note that reproducibility
+should imply in the following characteristics: repeatability, shareability,
+extensibility and stability, which is not guaranteed by most published material
+to date.  We proposed an open-source software suite called Bob
+(\url{https://www.idiap.ch/software/bob}) that possesses such characteristics,
+demonstrating its flexibility to various tasks including Medical Image
+Segmentation (\url{https://gitlab.idiap.ch/bob/bob.ip.binseg}), Remote
+Photoplethysmography (\url{https://gitlab.idiap.ch/bob/bob.rppg.base}), and
+Biometric Person Recognition (\url{https://gitlab.idiap.ch/bob/bob.bio.base}).
+
+\end{document}
+
+\typeout{ *************** End of file cv *************** }
