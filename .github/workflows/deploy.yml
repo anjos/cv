@@ -20,6 +20,9 @@ jobs:
         with:
             root_file: cv.tex
             latexmk_use_lualatex: true
+
+      - name: Copy
+        shell: bash -l {0}
         run: |
             mkdir output
             cp cv.pdf output/
