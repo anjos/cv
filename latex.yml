@@ -1,15 +1,12 @@
 name: latex
 channels:
-- https://www.idiap.ch/software/bob/conda
-- anjos
-- defaults
+    - https://www.idiap.ch/software/bob/conda
+    - defaults
 dependencies:
-- python=3.8
-- pip
-- pygments
-- tectonic
-- six
-- pyyaml
-- pip:
-  - latexcodec
-  - pybtex
+    - python=3.8
+    - pip
+    - pygments
+    - pyyaml
+    - pip:
+        - latexcodec
+        - pybtex

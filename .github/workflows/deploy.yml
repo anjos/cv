@@ -1,0 +1,35 @@
+name: deploy to anjos.github.io
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build
+        uses: xu-cheng/latex-action@v2
+        with:
+            root_file: cv.tex
+            latexmk_use_lualatex: true
+        run: |
+            mkdir output
+            cp cv.pdf output/
+            cp publications.bib output/
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+            deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+            publish_dir: ./output
+            external_repository: anjos/anjos.github.io
+            publish_branch: master
+            destination_dir: cv
