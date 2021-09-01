@@ -1,4 +1,30 @@
 %%%%%%%%%%%%
+%%  2021  %%
+%%%%%%%%%%%%
+
+@inproceedings{cbic-2021,
+    author = {Renzo, Matheus A. and Fernandez, Nat{\'{a}}lia and Baceti, Andr{\'{e}} A. and de Moura Junior, Natanael Nunes and Anjos, Andr{\'{e}}},
+    keywords = {Analog x-ray, Lung Segmentation, neural network, U-Net},
+    month = 10,
+    title = {Development of a lung segmentation algorithm for analog imaged chest X-Ray: preliminary results},
+    booktitle = {XV Brazilian Congress on Computational Intelligence},
+    year = {2021},
+    location = {Joinville, Brazil},
+    url = {https://pypi.org/project/bob.ip.binseg/},
+    pdf = {https://www.idiap.ch/~aanjos/papers/cbic-2021.pdf},
+    abstract = {Analog X-Ray radiography is still used in many underdeveloped regions around the world.  To allow these populations to benefit from advances in automatic computer-aided detection (CAD) systems, X-Ray films must be digitized. Unfortunately, this procedure may introduce imaging artefacts, which may severely impair the performance of such systems.
+
+This work investigates the impact digitized images may cause to deep neural networks trained for lung (semantic) segmentation on digital x-ray samples. While three public datasets for lung segmentation evaluation exist for digital samples, none are available for digitized data.  To this end, a U-Net-style architecture was trained on publicly available data, and used to predict lung segmentation on a newly annotated set of digitized images.
+
+Using typical performance metrics such as the area under the precision-recall curve (AUPRC), our results show that the model is capable to identify lung regions at digital X-Rays with a high intra-dataset (AUPRC: 0.99), and cross-dataset (AUPRC: 0.99) efficiency on unseen test data.  When challenged against digitized data, the performance is substantially degraded (AUPRC: 0.90).
+
+Our analysis also suggests that typical performance markers, maximum F1 score and AUPRC, seems not to be informative to characterize segmentation problems in test images. For this goal pixels does not have independence due to natural connectivity of lungs in images, this implies that a lung pixel tends to be surrounded by other lung pixels.
+
+This work is reproducible.  Source code, evaluation protocols and baseline results are available at: https://pypi.org/project/bob.ip.binseg/.},
+}
+
+
+%%%%%%%%%%%%
 %%  2020  %%
 %%%%%%%%%%%%
 
