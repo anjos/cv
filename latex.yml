@@ -1,12 +1,8 @@
 name: latex
 channels:
-    - https://www.idiap.ch/software/bob/conda
-    - defaults
+    - conda-forge
 dependencies:
-    - python=3.8
-    - pip
+    - python=3.9
     - pygments
-    - pyyaml
-    - pip:
-        - latexcodec
-        - pybtex
+    - latexcodec
+    - pybtex
