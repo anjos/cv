@@ -33,6 +33,4 @@ jobs:
         with:
             deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
             publish_dir: ./output
-            external_repository: anjos/anjos.github.io
-            publish_branch: master
-            destination_dir: cv
+            publish_branch: gh-pages
