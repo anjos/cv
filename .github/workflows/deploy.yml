@@ -1,4 +1,4 @@
-name: deploy to anjos.github.io
+name: deploy to anjos.github.io/cv
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
 
       - name: Checkout
@@ -31,6 +31,6 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-            deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+            deploy_key: ${{ secrets.GITHUB_TOKEN }}
             publish_dir: ./output
             publish_branch: gh-pages
