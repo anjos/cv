@@ -1,12 +1,13 @@
-.. image:: https://travis-ci.org/anjos/cv.svg?branch=master
-   :target: https://travis-ci.org/anjos/cv
+.. image:: https://github.com/anjos/cv/actions/workflows/deploy.yml/badge.svg
+   :target: https://github.com/anjos/cv/actions/workflows/deploy.yml
 
 =================================
  Curriculum Vitae of André Anjos
 =================================
 
 This package contains the source and build instructions for my CV. If you just
-want to access it, use this link.
+want to access it, use this link.  My CV and publication lists are
+auto-deployed to github-pages at https://andreanjos.org/cv/
 
 
 How to build from scratch
@@ -24,8 +25,8 @@ special SNSF versions of the CV.
 
 You'll also need to install a modern LaTeX distribution together with biber_,
 which is used to prepare the bibliography (my publications), for inclusion on
-the CV and publication lists. See the file ``.travis.yml`` for concrete details
-on how to setup.
+the CV and publication lists. See the file `.github/workflows/deploy.yml`_ for
+concrete details on how to setup.
 
 
 Build
@@ -37,32 +38,6 @@ To build the project and make it ready to run, do::
   $ make
 
 This command should leave you 3 PDFs containing the produced material.
-
-
-Development
------------
-
-Building dependencies requires you install ``conda-build``. Do the following to
-prepare::
-
-  $ conda install -n root conda-build anaconda-client
-
-Then, you can build dependencies one by one, in order::
-
-  $ vi ./scripts/conda-build-all.sh #comment/uncomment what to compile
-  $ ./scripts/conda-build-all.sh
-
-
-Anaconda Uploads
-================
-
-To upload all built dependencies (so you don't have to re-build them
-everytime), do::
-
-  $ anaconda login
-  # enter credentials
-  $ anaconda upload <conda-bld>/*-64/{rust,tectonic,pybtex}-*.tar.bz2
-
 
 
 .. Place your references after this line
