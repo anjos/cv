@@ -1,6 +1,46 @@
 %%%%%%%%%%%%
-%%  2019  %%
+%%  2021  %%
 %%%%%%%%%%%%
+
+@inproceedings{cbic-2021,
+    author = {Renzo, Matheus A. and Fernandez, Nat{\'{a}}lia and Baceti, Andr{\'{e}} A. and de Moura Junior, Natanael Nunes and Anjos, Andr{\'{e}}},
+    keywords = {Analog x-ray, Lung Segmentation, neural network, U-Net},
+    month = 10,
+    title = {Development of a lung segmentation algorithm for analog imaged chest X-Ray: preliminary results},
+    booktitle = {XV Brazilian Congress on Computational Intelligence},
+    year = {2021},
+    location = {Joinville, Brazil},
+    url = {https://publications.idiap.ch/index.php/publications/show/4649},
+    pdf = {https://www.idiap.ch/~aanjos/papers/cbic-2021.pdf},
+    abstract = {Analog X-Ray radiography is still used in many underdeveloped regions around the world.  To allow these populations to benefit from advances in automatic computer-aided detection (CAD) systems, X-Ray films must be digitized. Unfortunately, this procedure may introduce imaging artefacts, which may severely impair the performance of such systems.
+
+This work investigates the impact digitized images may cause to deep neural networks trained for lung (semantic) segmentation on digital x-ray samples. While three public datasets for lung segmentation evaluation exist for digital samples, none are available for digitized data.  To this end, a U-Net-style architecture was trained on publicly available data, and used to predict lung segmentation on a newly annotated set of digitized images.
+
+Using typical performance metrics such as the area under the precision-recall curve (AUPRC), our results show that the model is capable to identify lung regions at digital X-Rays with a high intra-dataset (AUPRC: 0.99), and cross-dataset (AUPRC: 0.99) efficiency on unseen test data.  When challenged against digitized data, the performance is substantially degraded (AUPRC: 0.90).
+
+Our analysis also suggests that typical performance markers, maximum F1 score and AUPRC, seems not to be informative to characterize segmentation problems in test images. For this goal pixels does not have independence due to natural connectivity of lungs in images, this implies that a lung pixel tends to be surrounded by other lung pixels.
+
+This work is reproducible.  Source code, evaluation protocols and baseline results are available at: https://pypi.org/project/bob.ip.binseg/.},
+}
+
+
+%%%%%%%%%%%%
+%%  2020  %%
+%%%%%%%%%%%%
+
+@article{compbiomed-2020,
+	title = {Competitive neural layer-based method to identify people with high risk for diabetic foot},
+	volume = {120},
+	url = {https://www.sciencedirect.com/science/article/pii/S0010482520301244},
+    pdf = {https://www.idiap.ch/~aanjos/papers/compbiomed-2020.pdf},
+	doi = {10.1016/j.compbiomed.2020.103744},
+	abstract = {Background and objective: To automatically identify patients with diabetes mellitus (DM) who have high risk of developing diabetic foot, via an unsupervised machine learning technique.  Methods: We collected a new database containing 54 known risk factors from 250 patients diagnosed with diabetes mellitus. The database also contained a separate validation cohort composed of 73 subjects, where the perceived risk was annotated by expert nurses. A competitive neuron layer-based method was used to automatically split training data into two risk groups.  Results: We found that one of the groups was composed of patients with higher risk of developing diabetic foot. The dominant variables that described group membership via our method agreed with the findings from other studies, and indicated a greater risk for developing such a condition. Our method was validated on the available test data, reaching 71\% sensitivity, 100\% specificity, and 90\% accuracy.  Conclusions Unsupervised learning may be deployed to screen patients with diabetes mellitus, pointing out high-risk individuals who require priority follow-up in the prevention of diabetic foot with very high accuracy. The proposed method is automatic and does not require clinical examinations to perform risk assessment, being solely based on the information of a questionnaire answered by patients. Our study found that discriminant variables for predicting risk group membership are highly correlated with expert opinion.},
+	journal = {Computers in Biology and Medicine},
+	author = {Ferreira, Ana Cl\'audia Barbosa Hon\'orio and Ferreira, Danton Diego and Oliveira, Henrique Ceretta and Resende, Igor Carvalho de and Anjos, Andr\'e and Lopes, Maria Helena Baena de Moraes},
+	month = may,
+	year = {2020},
+	keywords = {Artificial neural network, Diabetes mellitus, Diabetic foot},
+}
 
 @misc{arxiv-2020,
 	title = {The Little W-Net That Could: State-of-the-Art Retinal Vessel Segmentation with Minimalistic Models},
@@ -11,12 +51,16 @@
     eprint        = {2009.01907},
     archivePrefix = {arXiv},
     primaryClass  = {cs.CV},
-	journaltitle = {{arXiv}:2009.01907 [cs, eess] (submitted to IEEE Trans.  Medical Imaging)},
+	journaltitle = {{arXiv}:2009.01907 [cs, eess] (submitted to Nature Scientific Reports)},
     url           = {https://arxiv.org/abs/2009.01907},
     pdf           = {https://arxiv.org/pdf/2009.01907},
     addendum      = {Submitted to IEEE Trans. in Medical Imaging},
 	abstract = {The segmentation of the retinal vasculature from eye fundus images represents one of the most fundamental tasks in retinal image analysis. Over recent years, increasingly complex approaches based on sophisticated Convolutional Neural Network architectures have been slowly pushing performance on well-established benchmark datasets. In this paper, we take a step back and analyze the real need of such complexity. Specifically, we demonstrate that a minimalistic version of a standard UNet with several orders of magnitude less parameters, carefully trained and rigorously evaluated, closely approximates the performance of current best techniques. In addition, we propose a simple extension, dubbed W-Net, which reaches outstanding performance on several popular datasets, still using orders of magnitude less learnable weights than any previously published approach. Furthermore, we provide the most comprehensive cross-dataset performance analysis to date, involving up to 10 different databases. Our analysis demonstrates that the retinal vessel segmentation problem is far from solved when considering test images that differ substantially from the training data, and that this task represents an ideal scenario for the exploration of domain adaptation techniques. In this context, we experiment with a simple self-labeling strategy that allows us to moderately enhance cross-dataset performance, indicating that there is still much room for improvement in this area. Finally, we also test our approach on the Artery/Vein segmentation problem, where we again achieve results well-aligned with the state-of-the-art, at a fraction of the model complexity in recent literature. All the code to reproduce the results in this paper is released.},
 }
+
+%%%%%%%%%%%%
+%%  2019  %%
+%%%%%%%%%%%%
 
 @misc{arxiv-2019,
    title         = {On the Evaluation and Real-World Usage Scenarios of Deep Vessel Segmentation for Retinography},
@@ -73,21 +117,6 @@
   abstract = "While face recognition systems got a significant boost in terms of recognition performance in recent years, they are known to be vulnerable to presentation attacks. Up to date, most of the research in the field of face anti-spoofing or presentation attack detection was considered as a two-class classification task: features of bona-fide samples versus features coming from spoofing attempts. The main focus has been on boosting the anti-spoofing performance for databases with identical types of attacks across both training and evaluation subsets. However, in realistic applications the types of attacks are likely to be unknown, potentially occupying a broad space in the feature domain. Therefore, a failure to generalize on unseen types of attacks is one of the main potential challenges in existing anti-spoofing approaches. First, to demonstrate the generalization issues of two-class anti-spoofing systems we establish new evaluation protocols for existing publicly available databases. Second, to unite the data collection efforts of various institutions we introduce a challenging Aggregated database composed of 3 publicly available datasets: Replay-Attack, Replay-Mobile and MSU MFSD, reporting the performance on it. Third, considering existing limitations we propose a number of systems approaching a task of presentation attack detection as an anomaly detection, or a one-class classification problem, using only bona-fide features in the training stage. Using less training data, hence requiring less effort in the data collection, the introduced approach demonstrates a better generalization properties against previously unseen types of attacks on the proposed Aggregated database.",
 }
 
-@misc{arxiv-2017-2,
-  author = "Heusch, Guillaume and Anjos, Andr{\'{e}} and Marcel, S{\'{e}}bastien",
-  title = "A reproducible study on remote heart rate measurement",
-  journal = "arXiv",
-  year = "2017",
-  month = 9,
-  archivePrefix = "arXiv",
-  eprint = "1709.00962",
-  primaryClass = "cs-se",
-  url = "https://arxiv.org/abs/1709.00962",
-  pdf = "https://www.idiap.ch/~aanjos/papers/arxiv-2017-2.pdf",
-  addendum      = {Cited by 19 (source: Google Scholar)},
-  abstract = "This paper studies the problem of reproducible research in remote photoplethysmography (rPPG). Most of the work published in this domain is assessed on privately-owned databases, making it difficult to evaluate proposed algorithms in a standard and principled manner. As a consequence, we present a new, publicly available database containing a relatively large number of subjects recorded under two different lighting conditions. Also, three state-of-the-art rPPG algorithms from the literature were selected, implemented and released as open source free software. After a thorough, unbiased experimental evaluation in various settings, it is shown that none of the selected algorithms is precise enough to be used in a real-world scenario.",
-}
-
 @inproceedings{icml-2017-1,
   author = "Anjos, André and El Shafey, Laurent and Marcel, Sébastien",
   month = 8,
@@ -132,15 +161,3 @@
   addendum      = {Cited by 153 (source: Google Scholar)},
   abstract = "Bob is a free signal processing and machine learning toolbox originally developed by the Biometrics group at Idiap Research Institute, Switzerland. The toolbox is designed to meet the needs of researchers by reducing development time and efficiently processing data.  Firstly, Bob provides a researcher-friendly Python environment for rapid development.  Secondly, efficient processing of large amounts of multimedia data is provided by fast C++ implementations of identified bottlenecks.  The Python environment is integrated seamlessly with the C++ library, which ensures the library is easy to use and extensible.  Thirdly, Bob supports reproducible research through its integrated experimental protocols for several databases.  Finally, a strong emphasis is placed on code clarity, documentation, and thorough unit testing. Bob is thus an attractive resource for researchers due to this unique combination of ease of use, efficiency, extensibility and transparency.  Bob is an open-source library and an ongoing community effort.",
 }
-
-@inproceedings{biosig-2012,
-  author = "Ivana Chingovska AND André Anjos AND Sébastien Marcel",
-  title = "On the Effectiveness of Local Binary Patterns in Face Anti-spoofing",
-  booktitle = "IEEE International Conference of the Biometrics Special Interest Group",
-  year = "2012",
-  pdf = "https://www.idiap.ch/~aanjos/papers/biosig-2012.pdf",
-  isbn = "978-3-88579-290-1",
-  addendum      = {Cited by 539 (source: Google Scholar)},
-  abstract = "Spoofing attacks are one of the security traits that biometric recognition systems are proven to be vulnerable to. When spoofed, a biometric recognition system is bypassed by presenting a copy of the biometric evidence of a valid user. Among all biometric modalities, spoofing a face recognition system is particularly easy to perform: all that is needed is a simple photograph of the user. In this paper, we address the problem of detecting face spoofing attacks. In particular, we inspect the potential of texture features based on Local Binary Patterns (LBP) and their variations on three types of attacks: printed photographs, and photos and videos displayed on electronic screens of different sizes. For this purpose, we introduce REPLAY-ATTACK, a novel publicly available face spoofing database which contains all the mentioned types of attacks. We conclude that LBP, with ~15\% Half Total Error Rate, show moderate discriminability when confronted with a wide set of attack types.",
-}
-
