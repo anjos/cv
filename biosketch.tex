@@ -1,0 +1,308 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% coding=utf-8                       %
+% Andre Anjos <andre.anjos@idiap.ch> %
+% Mon Dec 13 07:42:50 CET 2021       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper]{nihbiosketch}
+
+% sorting=none will preserve the bib file order
+\usepackage{csquotes}
+\usepackage[backend=biber,maxbibnames=99,bibstyle=publist,plauthorhandling=highlight,marginyear=false,sorting=ddnt]{biblatex}
+\setlength\bibitemsep{1.5\itemsep}
+\plauthorname[André]{Anjos}
+
+\addbibresource{biosketch.bib}
+
+% This avoids the overfull boxes because biblatex does not break underlined
+% titles by default.
+\DeclareFieldFormat*{title}{#1}
+
+\DeclareFieldFormat*{titlecase}{%
+    \ifdef{\currentfield}
+      {\ifcurrentfield{title}
+         {\usefield{\uline}{\currentfield}}%
+         {#1}}
+      {#1}}
+
+\usepackage{color}
+\usepackage{hyperref}
+\definecolor{linkcolor}{rgb}{0.1,0.1,0.4}
+
+\AfterPreamble{\hypersetup{
+  pdfauthor={Andre Anjos},
+  pdftitle={Biosketch for Andre Anjos},
+  pdfsubject={Biosketch for Andre Anjos},
+  urlcolor=blue,
+  %colorlinks=true,    % false: boxed links; true: colored links
+  linkcolor=linkcolor, % color of internal links (change box color with linkbordercolor)
+  citecolor=linkcolor, % color of links to bibliography
+  filecolor=linkcolor, % color of file links
+  urlcolor=linkcolor   % color of external links
+}}
+
+\name{Anjos, André}
+%\eracommons{huntmc}
+\position{Scientific Researcher}
+
+\begin{document}
+
+\begin{education}
+    Federal University of Rio de Janeiro, Brazil &
+    B.S. &
+    12/1999 &
+    Electrical Engineering \\
+
+    Federal University of Rio de Janeiro, Brazil &
+    M.Sc. &
+    12/2001 &
+    Signal Processing \\
+
+    Federal University of Rio de Janeiro, Brazil and CERN, Switzerland &
+    D.Sc. &
+    12/2006 &
+    Machine Learning \\
+
+    Idiap Research Institute, Switzerland &
+    Postdoctoral &
+    06/2014 &
+    Biometrics \\
+\end{education}
+
+\section{Personal Statement}
+
+I received my Ph.D. degree in signal processing from the
+\href{https://www.ufrj.br/}{Federal University of Rio de Janeiro} in 2006. I
+joined the \href{https://atlas.ch/}{ATLAS Experiment} at European Centre for
+Particle Physics (\href{https://www.cern.ch/}{CERN}, Switzerland) from 2001
+until 2010 where I worked in the development and deployment of the Trigger and
+Data Acquisition systems that are nowadays powering the discovery of the Higgs
+boson. During my time at \href{https://www.cern.ch/}{CERN}, I studied the
+application of neural networks and statistical methods for particle recognition
+at the trigger level and developed several software components still in use
+today. In 2010, I joined the
+\href{https://www.idiap.ch/en/scientific-research/biometrics-security-and-privacy}{Biometrics Security and Privacy Group} at the
+\href{https://www.idiap.ch/en/scientific-research/biosignal-processing}{Idiap
+Research Institute} where he worked with face and vein biometrics, presentation
+attack detection, and reproducibility in research.  Since 2018 I head the
+\href{https://www.idiap.ch/en/scientific-research/biosignal-processing}{Biosignal
+Processing Group} at Idiap. My current research interests include medical
+applications, biometrics, image and signal processing, machine learning,
+research reproducibility and open science.  Among my open-source
+contributions, one can cite \href{https://www.idiap.ch/software/bob}{Bob} and
+the \href{https://www.idiap.ch/software/beat}{BEAT framework} for evaluation and
+testing of machine learning systems. I teach graduate-level
+\href{http://edu.epfl.ch/coursebook/en/fundamentals-in-statistical-pattern-recognition-EE-612}{machine learning
+courses} at the École Polytechnique Fédérale de Lausanne
+(\href{https://www.epfl.ch/}{EPFL}) and master courses at Idiap's
+\href{https://master-ai.ch/}{Master of AI}. I serve as reviewer for various
+scientific journals in pattern recognition, machine learning, and image.
+
+% key publications
+%\begin{enumerate}
+%    \item pub1
+%    \item pub2
+%\end{enumerate}
+
+\section{Positions}  % and Honors
+
+\subsection*{Positions and Employment}
+\begin{datetbl}
+2007--2010 & Research and Development Engineer, University of Wisconsin, Madison, USA \\
+
+2010--2013 & Post-doctoral Researcher, Idiap Research Institute, Switzerland \\
+
+2014--2018 & Research Associate, Idiap Research Institute, Switzerland \\
+
+2018-- & Scientific Researcher, Idiap Research Institute, Switzerland \\
+\end{datetbl}
+
+%\subsection*{Other Experience and Professional Memberships}
+%\begin{datetbl}
+%1995--           & Member, American Psychological Association \\
+%1998--           & Member, Gerontological Society of America \\
+%1998--           & Member, American Geriatrics Society \\
+%2000--           & Associate Editor, Psychology and Aging \\
+%2003--           & Board of Advisors, Senior Services of Eastern Missouri \\
+%2003--05         & NIH Peer Review Committee: Psychobiology of Aging, ad hoc reviewer \\
+%2007--11         & NIH Risk, Adult Addictions Study Section, members \\
+%\end{datetbl}
+
+%\subsection*{Honors}
+%\begin{datetbl}
+%2003            & Outstanding Young Faculty Award, Washington University, St.\ Louis, MO \\
+%2004            & Excellence in Teaching, Washington University, St.\ Louis, MO \\
+%2009            & Award for Best in Interdisciplinary Ethnography, International Ethnographic Society \\
+%\end{datetbl}
+
+%------------------------------------------------------------------------------
+
+\section{Contribution to Science}
+
+\begin{enumerate}
+
+\item \textbf{Computer Vision and Machine Learning} I have actively worked in
+    computer vision and deep learning (mostly) associated to biometric
+    recognition, with potential application to various other tasks.
+    Contributions range from the collection of datasets, the exploration of
+    different methods to address and assess biometric recognition
+    vulnerabilities, domain adaptation, and remote photoplethysmography.
+
+    While I have worked in various contributions, I highlight here key
+    publications from the past 5 years that may related to the proposal.
+
+    \begin{itemize}
+
+        \item Domain Specific Units (Adaptation): In~\cite{tifs-2019}, we apply
+            domain adaptation via dedicated Domain-Specific Units (DSU), with
+            an application to Heterogeneous Face Recognition.  In this class of
+            problems, one wants to recognize an individual across different
+            spectral data,  based on the representation on a principal spectrum
+            (e.g., visual).  It is a challenging task because multi-spectral
+            data for covering large populations is rare, which in turn stymies
+            the training of deep convolution-based architectures for this task.
+            We developed a mechanism to adapt the parameters of models
+            pre-trained on large visual spectral face recognition datasets,
+            which are readily available.  My contributions are directly related
+            to core idea of this work.
+
+      \item Anomaly Detection and Robustness: Biometric recognition systems are
+          exposed to presentation attacks, and dectectors (PAD) for this
+          purpose are required building blocks of thrustworthy systems.  Most
+          PAD systems work discriminatively, trying to separate attacks from
+          \textit{bona fide} presentations.  We showed this technique does not
+          generalize well to unseen presentation attacks.  We explored, for the
+          first time, alternate approaches by joint-modelling client identity
+          as a way to calibrate PAD output scores~\cite{tifs-2015}, showing
+          increased robustness to unseen attacks.  More recently, we also
+          showed that solely modelling \textit{bona fide} presentations is also
+          an effective way to increased PAD robustness~\cite{icb-2018}.
+          Finally, we showed that by adding heterogenous inputs to PAD systems
+          can improve their robustness~\cite{tifs-2019-2} to achieve
+          state-of-the-art performance, even to unseen conditions during
+          training.
+
+    \end{itemize}
+
+    This work was published as book chapters, international peer-reviewed
+    scientific journals (including articles at very high-impact factor
+    journals) and in peer-reviewed conference papers totalling a few thousand
+    citations. Accompanying software packages for suh contributions were
+    released publicly, under an open-source license. For details and more
+    links, please refer to the applicant's Research Output.
+
+\item \textbf{Semantic Segmentation for Medical Imaging}: Since the
+    introduction of U-Nets in 2015, the field of medical image segmentation has
+    seen renewed interest bringing in a variety of fully convolutional (deep)
+    neural network (FCN) architectures for binary and multi-class segmentation
+    problems promising very attractive results, with applications in computed
+    tomography, retinography, and histopathology to cite a few.  Despite the
+    incredible progress, the lack of annotated images (due to cost), and rigor
+    in the comparison of trained models has led the community to believe larger
+    and more dense networks provide better results.  This is particularly
+    noticeable in ophtalmological images such as those from bi-dimensional eye
+    fundus photography (retinography).  While retinography is not used for
+    precision diagnosis, it remains cheap and very effective means for mass
+    screening.  Semantical segmentation of eye fundus structures plays a key
+    role in this process.
+
+    I tried to address these gaps in two different ways.  The
+    first~\cite{arxiv-2019} was to conduct and publish rigorous (open source,
+    reproducible) benchmarks with popular retinography datasets and
+    state-of-the-art FCN models in which we: i) showed that simple
+    transformation techniques like rescaling, padding and cropping of combined
+    lower-resolution source datasets to the resolution and spatial composition
+    of a higher-resolution target dataset can be a surprisingly effective way
+    to improve segmentation quality in unseen conditions; ii) we proposed a set
+    of plots and metrics that give additional insights into model performance
+    and demonstrated via tables and plots how to take advantage of that
+    information, throwing a new light over some published benchmarks. In a
+    second contribution~\cite{arxiv-2020} we propose that a minimalistic
+    version of a standard U-Net with 3 orders of magnitude less parameters,
+    carefully trained and rigorously evaluated, closely approximates the
+    state-of-the-art performance in vessel segmentation for retinography.  In
+    addition, we propose a simple extension, dubbed W-Net, by concatenating two
+    U-Nets together, which reaches outstanding performance on several popular
+    datasets, still using orders of magnitude less learnable weights than any
+    previously published approach.
+
+\item \textbf{Reproducible Research}: We've been actively looking at the
+    reproducibility of published work and how to lower the entrance barrier of
+    publication readers, converting them into engaged users of methods we
+    create.  We argue it is insufficient, in most cases, to only publish
+    software leading to results if original data remains inaccessible. In
+    particular~\cite{acmmm-2012}, we note that reproducibility should imply in
+    the following characteristics: repeatability, shareability, extensibility
+    and stability, which is not guaranteed by most published material to date.
+    We proposed an open-source software suite called Bob
+    (\url{https://www.idiap.ch/software/bob}) that possesses such
+    characteristics, demonstrating its flexibility to various tasks including
+    Medical Image Segmentation
+    (\url{https://gitlab.idiap.ch/bob/bob.ip.binseg}), Remote
+    Photoplethysmography (\url{https://gitlab.idiap.ch/bob/bob.rppg.base}), and
+    Biometric Person Recognition
+    (\url{https://gitlab.idiap.ch/bob/bob.bio.base}).
+
+    From another perspective, there are legitimate cases in which raw data
+    leading to research conclusions cannot be published.  Furthermore, in a
+    growing number of use-cases, the availability of both software does not
+    translate to an accessible reproducibility scenario.  The user, for
+    example, may not have the necessary equipment to perform the analysis.  To
+    bridge this gap, we built an open platform for research
+    (\url{https://www.beat-eu.org/platform}) in computational sciences related
+    to pattern recognition and machine learning, to help on the development,
+    reproducibility and certification of results obtained in the
+    field~\cite{icml-2017-1}.  The BEAT platform is distributed under an
+    open-source license (\url{https://www.idiap.ch/software/beat/}).
+
+    Both projects are still active and support past and future work at Idiap
+    and beyond.  We conducted (and will continue doing) lectures to both master
+    and graduate students about reproducibility in data science (refer to the
+    applicant's CV under the section "Teaching" for details).  There are
+    currently $\sim$180 \textit{direct} citations to publications about Bob and
+    BEAT core frameworks.
+
+\end{enumerate}
+
+\renewcommand{\refname}{Referenced Publications}
+\nocite{*}
+\printbibliography
+
+\subsection*{Complete List of Published Work:}
+\url{https://andreanjos.org/publications/}
+
+\section{Research Support}
+
+\subsection*{Ongoing Research Support}
+
+\grantinfo{EU H2020}{AI4EU}{01/2019--02/2022}
+{Artitificial Intelligence Platform for Europe}
+{The goal of this project is the design and construction of an Artificial
+    Intelligence platform assembling all stakeholders in Europe.}
+{Role: Partner}
+
+\bigskip
+
+\grantinfo{EU CHIST-ERA}{LEARN-REAL}{01/2019--12/2022}
+{Learning physical manipulation skills with simulators using realistic variations}
+{The goal of this project is to build reproducible benchmarks of realistic
+robotic simulations that can be used by the community.}
+{Role: co-PI}
+
+\bigskip
+
+\grantinfo{CH TheArk}{SECure}{01/2022--12/2022}
+{Safe and Explainable Clinical AI for Orthopaedic Surgical Assessment}
+{The goal of this project is to build a predictive tool to support medical
+decision in surgery assessment.}
+{Role: PI}
+
+\subsection*{Completed Research Support}
+
+\grantinfo{EU CHIST-ERA}{ALLIES}{01/2018--12/2021}
+{Autonomous Lifelong learnIng intelLigent Systems}
+{The goal of this project is to build machine learning systems that can learn
+through time.}
+{Role: Partner}
+
+\end{document}

@@ -1,0 +1,137 @@
+%%%%%%%%%%%%
+%%  2020  %%
+%%%%%%%%%%%%
+
+@article{compbiomed-2020,
+	title = {Competitive neural layer-based method to identify people with high risk for diabetic foot},
+	volume = {120},
+	url = {https://www.sciencedirect.com/science/article/pii/S0010482520301244},
+    pdf = {https://www.idiap.ch/~aanjos/papers/compbiomed-2020.pdf},
+	doi = {10.1016/j.compbiomed.2020.103744},
+	abstract = {Background and objective: To automatically identify patients with diabetes mellitus (DM) who have high risk of developing diabetic foot, via an unsupervised machine learning technique.  Methods: We collected a new database containing 54 known risk factors from 250 patients diagnosed with diabetes mellitus. The database also contained a separate validation cohort composed of 73 subjects, where the perceived risk was annotated by expert nurses. A competitive neuron layer-based method was used to automatically split training data into two risk groups.  Results: We found that one of the groups was composed of patients with higher risk of developing diabetic foot. The dominant variables that described group membership via our method agreed with the findings from other studies, and indicated a greater risk for developing such a condition. Our method was validated on the available test data, reaching 71\% sensitivity, 100\% specificity, and 90\% accuracy.  Conclusions Unsupervised learning may be deployed to screen patients with diabetes mellitus, pointing out high-risk individuals who require priority follow-up in the prevention of diabetic foot with very high accuracy. The proposed method is automatic and does not require clinical examinations to perform risk assessment, being solely based on the information of a questionnaire answered by patients. Our study found that discriminant variables for predicting risk group membership are highly correlated with expert opinion.},
+	journal = {Computers in Biology and Medicine},
+	author = {Ferreira, Ana Cl\'audia Barbosa Hon\'orio and Ferreira, Danton Diego and Oliveira, Henrique Ceretta and Resende, Igor Carvalho de and Anjos, Andr\'e and Lopes, Maria Helena Baena de Moraes},
+	month = may,
+	year = {2020},
+	keywords = {Artificial neural network, Diabetes mellitus, Diabetic foot},
+}
+
+@misc{arxiv-2020,
+	title = {The Little W-Net That Could: State-of-the-Art Retinal Vessel Segmentation with Minimalistic Models},
+	author = {Galdran, Adrian and Anjos, André and Dolz, José and Chakor, Hadi and Lombaert, Hervé and Ayed, Ismail Ben},
+	year = {2020},
+    month = 9,
+	eprinttype = {arxiv},
+    eprint        = {2009.01907},
+    archivePrefix = {arXiv},
+    primaryClass  = {cs.CV},
+	journaltitle = {{arXiv}:2009.01907 [cs, eess] (submitted to Nature Scientific Reports)},
+    url           = {https://arxiv.org/abs/2009.01907},
+    pdf           = {https://arxiv.org/pdf/2009.01907},
+    addendum      = {Submitted to IEEE Trans. in Medical Imaging},
+	abstract = {The segmentation of the retinal vasculature from eye fundus images represents one of the most fundamental tasks in retinal image analysis. Over recent years, increasingly complex approaches based on sophisticated Convolutional Neural Network architectures have been slowly pushing performance on well-established benchmark datasets. In this paper, we take a step back and analyze the real need of such complexity. Specifically, we demonstrate that a minimalistic version of a standard UNet with several orders of magnitude less parameters, carefully trained and rigorously evaluated, closely approximates the performance of current best techniques. In addition, we propose a simple extension, dubbed W-Net, which reaches outstanding performance on several popular datasets, still using orders of magnitude less learnable weights than any previously published approach. Furthermore, we provide the most comprehensive cross-dataset performance analysis to date, involving up to 10 different databases. Our analysis demonstrates that the retinal vessel segmentation problem is far from solved when considering test images that differ substantially from the training data, and that this task represents an ideal scenario for the exploration of domain adaptation techniques. In this context, we experiment with a simple self-labeling strategy that allows us to moderately enhance cross-dataset performance, indicating that there is still much room for improvement in this area. Finally, we also test our approach on the Artery/Vein segmentation problem, where we again achieve results well-aligned with the state-of-the-art, at a fraction of the model complexity in recent literature. All the code to reproduce the results in this paper is released.},
+}
+
+%%%%%%%%%%%%
+%%  2019  %%
+%%%%%%%%%%%%
+
+@misc{arxiv-2019,
+   title         = {On the Evaluation and Real-World Usage Scenarios of Deep Vessel Segmentation for Retinography},
+   author        = {Tim Laibacher and Andr\'e Anjos},
+   year          = {2019},
+   month         = 9,
+   eprint        = {1909.03856},
+   archivePrefix = {arXiv},
+   primaryClass  = {cs.CV},
+   url           = {https://arxiv.org/abs/1909.03856},
+   pdf           = {https://arxiv.org/pdf/1909.03856},
+   addendum      = {To be submitted to 2021 Medical Image Computing and Computer
+                    Assisted Intervention Conference},
+   abstract = {We identify and address three research gaps in the field of vessel segmentation for retinography.  The first focuses on the task of inference on high-resolution fundus images for which only a limited set of ground-truth data is publicly available.  Notably, we highlight that simple rescaling and padding or cropping of lower resolution datasets is surprisingly effective.  We further explore the effectiveness of semi-supervised learning for better domain adaptation in this context.  Our results show competitive performance on a set of common public retina datasets, using a small and light-weight neural network.  For HRF, the only very high-resolution dataset currently available, we reach comparable, if not superior, state-of-the-art performance by solely relying on training images from lower-resolution datasets.  The second topic we address concerns the lack of standardisation in evaluation metrics.  We investigate the variability of the F1-score on the existing datasets and report results for recently published architectures.  Our evaluation show that most reported results are actually comparable to each other in performance.  Finally, we address the issue of reproducibility, by open-sourcing the complete framework used to produce results shown here.},
+}
+
+@article{tifs-2019-2,
+    author = {George, Anjith and Mostaani, Zohreh and Geissenbuhler, David and Nikisins, Olegs and Anjos, Andr{\'{e}} and Marcel, S{\'{e}}bastien},
+    title = {Biometric Face Presentation Attack Detection with Multi-Channel Convolutional Neural Network},
+    journal = {IEEE Transactions on Information Forensics and Security},
+    month = 5,
+    year = {2019},
+    doi = {10.1109/TIFS.2019.2916652},
+    pdf = {https://www.idiap.ch/~aanjos/papers/tifs-2019-2.pdf},
+    addendum      = {Cited by 31 (source: Google Scholar)},
+    abstract = {Face recognition is a mainstream biometric authentication method. However, vulnerability to presentation attacks (a.k.a spoofing) limits its usability in unsupervised applications. Even though there are many methods available for tackling presentation attacks (PA), most of them fail to detect sophisticated attacks such as silicone masks.
+                As the quality of presentation attack instruments improves over time, achieving reliable PA detection with visual spectra alone remains very challenging. We argue that analysis in multiple channels might help to address this issue.  In this context, we propose a multi-channel Convolutional Neural Network based approach for presentation attack detection (PAD).
+                We also introduce the new Wide Multi-Channel presentation Attack (WMCA) database for face PAD which contains a wide variety of 2D and 3D presentation attacks for both impersonation and obfuscation attacks. Data from different channels such as color, depth, near-infrared and thermal are available to advance the research in face PAD. The proposed method was compared with feature-based approaches and found to outperform the baselines achieving an ACER of 0.3\% on the introduced dataset. The database and the software to reproduce the results are made available publicly.},
+}
+
+@article{tifs-2019,
+  author = {de Freitas Pereira, Tiago and Anjos, André and Marcel, Sébastien},
+  month = 12,
+  title = {Heterogeneous Face Recognition Using Domain Specific Units},
+  journal = {IEEE Transactions on Information Forensics and Security},
+  year = {2019},
+  doi = {10.1109/TIFS.2018.2885284},
+  url = "http://publications.idiap.ch/index.php/publications/show/3963",
+  pdf = "https://www.idiap.ch/~aanjos/papers/ieee-tifs-2018.pdf",
+  addendum      = {Cited by 23 (source: Google Scholar)},
+  abstract = {The task of Heterogeneous Face Recognition consists in matching face images that are sensed in different domains, such as sketches to photographs (visual spectra images), thermal images to photographs or near-infrared images to photographs. In this work we suggest that high level features of Deep Convolutional Neural Networks trained on visual spectra images are potentially domain independent and can be used to encode faces sensed in different image domains. A generic framework for Heterogeneous Face Recognition is proposed by adapting Deep Convolutional Neural Networks low level features in, so called, “Domain Specific Units”. The adaptation using Domain Specific Units allow the learning of shallow feature detectors specific for each new image domain.  Furthermore, it handles its transformation to a generic face space shared between all image domains. Experiments carried out with four different face databases covering three different image domains show substantial improvements, in terms of recognition rate, surpassing the state-of-the-art for most of them. This work is made reproducible: all the source code, scores and trained models of this approach are made publicly available.},
+}
+
+@inproceedings{icb-2018,
+  author = "Nikisins, Olegs and Mohammadi, Amir and Anjos, André and Marcel, Sébastien",
+  month = 2,
+  title = "On Effectiveness of Anomaly Detection Approaches against Unseen Presentation Attacks in Face Anti-Spoofing",
+  booktitle = "ICB",
+  year = "2018",
+  url = "https://publications.idiap.ch/index.php/publications/show/3793",
+  pdf = "https://www.idiap.ch/~aanjos/papers/icb-2018.pdf",
+  doi= "10.1109/ICB2018.2018.00022",
+  addendum      = {Cited by 44 (source: Google Scholar)},
+  abstract = "While face recognition systems got a significant boost in terms of recognition performance in recent years, they are known to be vulnerable to presentation attacks. Up to date, most of the research in the field of face anti-spoofing or presentation attack detection was considered as a two-class classification task: features of bona-fide samples versus features coming from spoofing attempts. The main focus has been on boosting the anti-spoofing performance for databases with identical types of attacks across both training and evaluation subsets. However, in realistic applications the types of attacks are likely to be unknown, potentially occupying a broad space in the feature domain. Therefore, a failure to generalize on unseen types of attacks is one of the main potential challenges in existing anti-spoofing approaches. First, to demonstrate the generalization issues of two-class anti-spoofing systems we establish new evaluation protocols for existing publicly available databases. Second, to unite the data collection efforts of various institutions we introduce a challenging Aggregated database composed of 3 publicly available datasets: Replay-Attack, Replay-Mobile and MSU MFSD, reporting the performance on it. Third, considering existing limitations we propose a number of systems approaching a task of presentation attack detection as an anomaly detection, or a one-class classification problem, using only bona-fide features in the training stage. Using less training data, hence requiring less effort in the data collection, the introduced approach demonstrates a better generalization properties against previously unseen types of attacks on the proposed Aggregated database.",
+}
+
+@inproceedings{icml-2017-1,
+  author = "Anjos, André and El Shafey, Laurent and Marcel, Sébastien",
+  month = 8,
+  title = "BEAT: An Open-Science Web Platform",
+  booktitle = "Thirty-fourth International Conference on Machine Learning",
+  year = "2017",
+  location = "Sydney, Australia",
+  url = "https://publications.idiap.ch/index.php/publications/show/3665",
+  pdf = "https://www.idiap.ch/~aanjos/papers/icml-2017-1.pdf",
+  poster = "https://www.idiap.ch/~aanjos/posters/icml-2017-1.pdf",
+  addendum      = {Cited by 9 (source: Google Scholar)},
+  abstract = "With the increased interest in computational sciences, machine learning (ML), pattern recognition (PR) and big data, governmental agencies, academia and manufacturers are overwhelmed by the constant influx of new algorithms and techniques promising improved performance, generalization and robustness. Sadly, result reproducibility is often an overlooked feature accompanying original research publications, competitions and benchmark evaluations. The main reasons behind such a gap arise from natural complications in research and development in this area: the distribution of data may be a sensitive issue; software frameworks are difficult to install and maintain; Test protocols may involve a potentially large set of intricate steps which are difficult to handle.
+
+    To bridge this gap, we built an open platform for research in computational sciences related to pattern recognition and machine learning, to help on the development, reproducibility and certification of results obtained in the field. By making use of such a system, academic, governmental or industrial organizations enable users to easily and socially develop processing toolchains, re-use data, algorithms, workflows and compare results from distinct algorithms and/or parameterizations with minimal effort. This article presents such a platform and discusses some of its key features, uses and limitations. We overview a currently operational prototype and provide design insights.",
+}
+
+@article{tifs-2015,
+  author = "Chingovska, Ivana and Anjos, Andr{\'{e}}",
+  keywords = "Biometric Verification, Counter-Measures, Counter-Spoofing, Liveness Detection, Replay, Spoofing Attacks",
+  title = "On the use of client identity information for face anti-spoofing",
+  journal = "IEEE Transactions on Information Forensics and Security, Special Issue on Biometric Anti-spoofing",
+  volume = "10",
+  number = "4",
+  month = 2,
+  year = "2015",
+  pages = "787--796",
+  doi = "10.1109/TIFS.2015.2400392",
+  pdf = "https://www.idiap.ch/~aanjos/papers/tifs-2015.pdf",
+  addendum = {Cited by 49 (source: Google Scholar)},
+  abstract = "With biometrics playing the role of a password which can not be replaced if stolen, the necessity of establishing counter-measures to biometric spoofing attacks has been recognized. Regardless of the biometric mode, the typical approach of anti-spoofing systems is to classify biometric evidence based on features discriminating between real accesses and spoofing attacks. For the first time, to the best of our knowledge, this paper studies the amount of client-specific information within these features and how it affects the performance of anti-spoofing systems. We make use of this information to build two client-specific anti-spoofing solutions, one relying on a generative and another one on a discriminative paradigm. The proposed methods, tested on a set of state-of-the-art anti-spoofing features for the face mode, outperform the client-independent approaches with up to 50\% relative improvement and exhibit better generalization capabilities on unseen types of spoofing attacks.",
+}
+
+
+@inproceedings{acmmm-2012,
+  author = "André Anjos AND Laurent El Shafey AND Roy Wallace AND Manuel Günther AND Chris McCool AND Sébastien Marcel",
+  title = "Bob: a free signal processing and machine learning toolbox for researchers",
+  booktitle = "ACM Multimedia 2012",
+  year = "2012",
+  pages = "1449--1452",
+  pdf = "https://www.idiap.ch/~aanjos/papers/acmmm-2012.pdf",
+  doi = "10.1145/2393347.2396517",
+  addendum      = {Cited by 153 (source: Google Scholar)},
+  abstract = "Bob is a free signal processing and machine learning toolbox originally developed by the Biometrics group at Idiap Research Institute, Switzerland. The toolbox is designed to meet the needs of researchers by reducing development time and efficiently processing data.  Firstly, Bob provides a researcher-friendly Python environment for rapid development.  Secondly, efficient processing of large amounts of multimedia data is provided by fast C++ implementations of identified bottlenecks.  The Python environment is integrated seamlessly with the C++ library, which ensures the library is easy to use and extensible.  Thirdly, Bob supports reproducible research through its integrated experimental protocols for several databases.  Finally, a strong emphasis is placed on code clarity, documentation, and thorough unit testing. Bob is thus an attractive resource for researchers due to this unique combination of ease of use, efficiency, extensibility and transparency.  Bob is an open-source library and an ongoing community effort.",
+}
