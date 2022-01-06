@@ -35,6 +35,7 @@
 % stores the starting year (current year - 4)
 \usepackage{calc}
 \newcounter{startyear}
+\newcounter{currentyear}
 
 % hyperref setup
 \definecolor{linkcolor}{rgb}{0.1,0.1,0.4}
@@ -91,8 +92,9 @@ Switzerland, CH-1920}{}
 
 \begin{document}
 
-\setcounter{startyear}{\year-5}
-\section{Research Output for André Anjos (\thestartyear\ -- \the\year)}
+\setcounter{startyear}{\year-6}
+\setcounter{currentyear}{\the\year-1}
+\section{Research Output for André Anjos (\thestartyear\ -- \thecurrentyear)}
 
 \cvitem{Complete list}{\url{http://andreanjos.org}}
 \cvitem{H-index}{ = 26, 19900+ citations}
@@ -124,15 +126,16 @@ Switzerland, CH-1920}{}
 
 \begin{description}
 
-  \item[\the\year(-2010)] \textit{Bob} - Bob is a signal-processing and machine
+  \item[\thecurrentyear(-2010)] \textit{Bob} - Bob is a signal-processing and machine
     learning toolbox.  It provides fundamental building blocks and complete
-    systems for reproducible research software packages.  The entirety of Bob's
-    echo system is distributed through an open-source license and maintained to
-    date. I'm one of Bob's main authors and architect.  A complete list of
-    software packages can be browsed from \url{https://gitlab.idiap.ch/bob}.
-    Notable recent packages:
+    systems for reproducible research software packages.  I'm one of Bob's main
+    authors and architect.  A complete list of software packages can be browsed
+    from \url{https://gitlab.idiap.ch/bob}. Notable recent packages:
 
     \begin{description}
+      \item[2021] \textit{bob.med.tb} - Tuberculosis detection from front chest
+          X-Ray images; URL: \url{https://gitlab.idiap.ch/bob/bob.med.tb}
+
       \item[2019] \textit{bob.ip.binseg} - Semantic Segmentation Benchmark
           Package for Bob; URL: \url{https://gitlab.idiap.ch/bob/bob.ip.binseg}
 
@@ -152,7 +155,7 @@ Switzerland, CH-1920}{}
     \end{description}
 
 
-  \item[\the\year(-2012)] \textit{BEAT} - The BEAT platform is a European
+  \item[\thecurrentyear(-2012)] \textit{BEAT} - The BEAT platform is a European
     computing e-infrastructure for Open Science.  The source code for the whole
     platform is distributed through an open-source license and maintained to
     date.  I'm one of BEAT's main authors and architect.  A complete list of
