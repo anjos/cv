@@ -7,7 +7,7 @@
 
 This package contains the source and build instructions for my CV. If you just
 want to access it, use this link.  My CV and publication lists are
-auto-deployed to github-pages at https://andreanjos.org/cv/
+auto-deployed to github-pages at https://anjos.ai/cv/
 
 
 How to build from scratch
