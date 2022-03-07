@@ -10,7 +10,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    container: index.docker.io/aergus/latex
+    container: index.docker.io/anjos/latex
     steps:
 
       - name: Checkout
