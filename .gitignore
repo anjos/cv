@@ -13,3 +13,4 @@
 *.fdb_latexmk
 *.synctex.gz
 filtered.bib
+.envrc
