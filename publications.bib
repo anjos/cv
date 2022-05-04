@@ -31,15 +31,11 @@ Publisher: Nature Publishing Group},
 %%%%%%%%%%%%
 
 @inproceedings{cbic-2021,
-    author = {Renzo, Matheus A. and Fernandez, Nat{\'{a}}lia and Baceti, Andr{\'{e}} A. and de Moura Junior, Natanael Nunes and Anjos, Andr{\'{e}}},
-    keywords = {Analog x-ray, Lung Segmentation, neural network, U-Net},
-    month = 10,
-    title = {Development of a lung segmentation algorithm for analog imaged chest X-Ray: preliminary results},
-    booktitle = {XV Brazilian Congress on Computational Intelligence},
-    year = {2021},
-    location = {Joinville, Brazil},
-    url = {https://publications.idiap.ch/index.php/publications/show/4649},
+	title = {Development of a lung segmentation algorithm for analog imaged chest X-Ray: preliminary results},
+	url = {https://sbic.org.br/eventos/cbic_2021/cbic2021-123/},
     pdf = {https://www.idiap.ch/~aanjos/papers/cbic-2021.pdf},
+	doi = {10.21528/CBIC2021-123},
+	shorttitle = {Development of a lung segmentation algorithm for analog imaged chest X-Ray},
     abstract = {Analog X-Ray radiography is still used in many underdeveloped regions around the world.  To allow these populations to benefit from advances in automatic computer-aided detection (CAD) systems, X-Ray films must be digitized. Unfortunately, this procedure may introduce imaging artefacts, which may severely impair the performance of such systems.
 
 This work investigates the impact digitized images may cause to deep neural networks trained for lung (semantic) segmentation on digital x-ray samples. While three public datasets for lung segmentation evaluation exist for digital samples, none are available for digitized data.  To this end, a U-Net-style architecture was trained on publicly available data, and used to predict lung segmentation on a newly annotated set of digitized images.
@@ -49,8 +45,15 @@ Using typical performance metrics such as the area under the precision-recall cu
 Our analysis also suggests that typical performance markers, maximum F1 score and AUPRC, seems not to be informative to characterize segmentation problems in test images. For this goal pixels does not have independence due to natural connectivity of lungs in images, this implies that a lung pixel tends to be surrounded by other lung pixels.
 
 This work is reproducible.  Source code, evaluation protocols and baseline results are available at: https://pypi.org/project/bob.ip.binseg/.},
+	eventtitle = {Congresso Brasileiro de Inteligência Computacional},
+	pages = {1--8},
+	booktitle = {Anais do 15. Congresso Brasileiro de Inteligência Computacional},
+    year = {2021},
+    month = 10,
+	publisher = {{SBIC}},
+	author = {Renzo, Matheus A. and Fernandez, Natália and Baceti, André A. and Moura Junior, Natanael Nunes and Anjos, André},
+	date = {2021-01-01},
 }
-
 
 %%%%%%%%%%%%
 %%  2020  %%
