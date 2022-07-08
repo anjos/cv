@@ -1,7 +1,9 @@
-\typeout{ ====================================================================}
-\typeout{ This is file snsf-achievements, created at Mon 14 May 11:45:34 2018 CEST }
-\typeout{ Andre Anjos <andre.anjos@idiap.ch>                                  }
-\typeout{ ====================================================================}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% coding=utf-8                       %
+% Andre Anjos <andre.anjos@idiap.ch> %
+% Fri Jul  8 16:06:12 CEST 2022      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \documentclass[a4paper,10pt,onecolumn]{article}
 \usepackage[T1]{fontenc}
@@ -104,18 +106,29 @@ previously published approach.  This work also provide a very comprehensive
 intra and cross-dataset performance analysis, involving up to 10 different
 databases, including artery/vein multi-class semantic segmentation.
 
-\section{Contributions to Computer Vision and Deep Learning in Biometrics}
+\section{Contributions to Computer Vision and Deep Learning}
 
-I have actively worked in computer vision and deep learning (mostly) associated
-to biometric recognition, with potential application to various other tasks.
-Contributions range from the collection of datasets, the exploration of
-different methods to address and assess biometric recognition vulnerabilities,
-domain adaptation, and remote photoplethysmography.
+I have actively worked in computer vision and deep learning. Contributions
+range from the collection of datasets, the exploration of different methods to
+address and assess biometric recognition vulnerabilities, domain adaptation,
+radiomics, and remote photoplethysmography.
 
 While I have worked in various contributions, I highlight here key publications
-from the past 5 years that may related to the proposal.
+that are relevant to the proposal.
 
 \begin{itemize}
+
+    \item Pulmonary Tuberculosis Computer-Aided Diagnosis: Previous CAD models
+        are based on direct image to probability detection techniques, and do
+        not generalize well.  We propose a method that overcomes these
+        limitations by using radiological findings as intermediary proxies for
+        PT detection in~\footcite{union-2022}.  We developed a multi-class deep
+        learning model, mapping images to 14 radiological signs such as
+        cavities, infiltration, nodules, and fibrosis.  Using three public PTB
+        datasets summing up 955 images, we developed a second model mapping
+        probabilities to PTB diagnosis (binary labels). This approach shows
+        better generalization capabilities than direct models, learnt directly
+        from PTB training data or by transfer learning.
 
     \item Domain Specific Units (Adaptation): In~\footcite{tifs-2019}, we apply
         domain adaptation via dedicated Domain-Specific Units (DSU), with an
@@ -144,17 +157,6 @@ from the past 5 years that may related to the proposal.
       heterogenous inputs to PAD systems can improve their
       robustness\footcite{tifs-2019-2} to achieve state-of-the-art performance,
       even to unseen conditions during training.
-
-  \item Remote Photoplethysmography (rPPG):  This study\footcite{arxiv-2017-2}
-      tackles the problem of reproducibility in rPPG. To date, most of the work
-      published in this domain was assessed on privately-owned databases,
-      making it difficult to evaluate proposed algorithms.   We introduded a
-      new, publicly available dataset containing a relatively large number of
-      subjects recorded under two different lighting conditions.  We then
-      thoroughly benchmarked state-of-the-art algorithms using an unbiased
-      experimental evaluation in various settings.  We showed that none of the
-      selected algorithms is precise enough to be used in a real-world
-      scenario.
 
 \end{itemize}
 
@@ -200,5 +202,3 @@ $\sim$180 \textit{direct} citations to publications about Bob and BEAT core
 frameworks.
 
 \end{document}
-
-\typeout{ *************** End of file cv *************** }

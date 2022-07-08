@@ -3,7 +3,6 @@
 
 MAINFILE=cv.tex snsf-cv.tex snsf-research-output.tex snsf-achievements.tex euraxess-cv.tex fapesp-cv.tex snsf-sinergia-cv.tex snsf-sinergia-achievements.tex biosketch.tex
 PDFFILE=$(MAINFILE:%.tex=%.pdf)
-
 .PHONY : FORCE_MAKE filtered.bib clean
 
 all: $(PDFFILE)
