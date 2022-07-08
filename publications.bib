@@ -2,6 +2,23 @@
 %%  2022  %%
 %%%%%%%%%%%%
 
+@inproceedings{union-2022,
+         author = {Raposo, Geoffrey and Trajman, Anete and Anjos, Andr{\'{e}}},
+          month = 11,
+          title = {Pulmonary Tuberculosis Screening from Radiological Signs on Chest X-Ray Images Using Deep Models},
+      booktitle = {Union World Conference on Lung Health},
+           year = {2022},
+   organization = {The Union},
+       abstract = {Background: The World Health Organization has recently recommended the use of computer-aided detection (CAD) systems for screening pulmonary tuberculosis (PT) in Chest X-Ray images. Previous CAD models are based on direct image to probability detection techniques - and do not generalize well (from training to validation databases). We propose a method that overcomes these limitations by using radiological signs as intermediary proxies for PT detection.
+
+Design/Methods: We developed a multi-class deep learning model, mapping images to 14 radiological signs such as cavities, infiltration, nodules, and fibrosis, using the National Institute of Health (NIH) CXR14 dataset, which contains 112,120 images. Using three public PTB datasets (Montgomery County - MC, Shenzen - CH, and Indian - IN), summing up 955 images, we developed a second model mapping F probabilities to PTB diagnosis (binary labels). We evaluated this approach for its generalization capabilities against direct models, learnt directly from PTB training data or by transfer learning via cross-folding and cross-database experiments. The area under the specificity vs. sensitivity curve (AUC) considering all folds was used to summarize the performance of each approach.
+
+Results: The AUC for intra-dataset tests baseline direct detection deep models achieved 0.95 (MC), 0.95 (CH) and 0.91 (IN), with up to 35\% performance drop on a cross-dataset evaluation scenario. Our proposed approach achieved AUC of 0.97 (MC), 0.90 (CH), and 0.93 (IN), with at most 11\% performance drop on a cross-dataset evaluation (Table/figures). In most tests, the difference was less than 5\%.
+
+Conclusions: A two-step CAD model based on radiological signs offers an adequate base for the development of PT screening systems and is more generalizable than a direct model. Unlike commercially available CADS, our model is completely reproducible and available open source at https://pypi.org/project/bob.med.tb/.}
+}
+
+
 @article{nsr-2022,
 	title = {State-of-the-art retinal vessel segmentation with minimalistic models},
 	volume = {12},
