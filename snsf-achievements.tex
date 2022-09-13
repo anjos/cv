@@ -70,29 +70,20 @@ multi-class segmentation problems promising very attractive results, with
 applications in computed tomography, retinography, and histopathology to cite a
 few.  Despite the incredible progress, the lack of annotated images (due to
 cost), and rigor in the comparison of trained models has led the community to
-believe larger and more dense networks provide better results.  This is
-particularly noticeable in ophtalmological images such as those from
-bi-dimensional eye fundus photography (retinography).  While retinography is
-not used for precision diagnosis, it remains cheap and very effective means for
-mass screening.  Semantical segmentation of eye fundus structures plays a key
-role in this process.
+believe larger and more dense networks provide better results.
 
 I tried to address these gaps in two different ways.  The
-first\footcite{arxiv-2019} was to conduct and publish rigorous (open source,
-reproducible) benchmarks with popular retinography datasets and
-state-of-the-art FCN models in which we: i) showed that simple transformation
-techniques like rescaling, padding and cropping of combined lower-resolution
-source datasets to the resolution and spatial composition of a
-higher-resolution target dataset can be a surprisingly effective way to improve
-segmentation quality in unseen conditions; ii) we proposed a set of plots and
-metrics that give additional insights into model performance and demonstrated
-via tables and plots how to take advantage of that information, throwing a new
-light over some published benchmarks.  We argue the performance of many
-contributions available in literature is actually quite comparable within
-standard deviation margins of each other, in spite of huge differences in the
-number of parameters for different architectures.  Finally, we made our
-findings reproducible, distributing code and documentation for future
-researchers to build upon, in the hopes to inspire future work in the
+first\footcite{arxiv-2019,cbic-2021} was to conduct and publish rigorous (open
+source, reproducible) benchmarks with popular datasets and state-of-the-art FCN
+models in which we: i) showed that target domain fine-tuning is an effective
+way to improve segmentation quality in unseen conditions; ii) current
+state-of-the-art is bound by dataset sizes and very little is related to model
+capacity.  We argue the performance of many contributions available in
+literature is actually quite comparable within standard deviation margins of
+each other, in spite of huge differences in the number of parameters for
+different architectures.  Finally, we made our findings reproducible,
+distributing code and documentation for future researchers to build upon, in
+the hopes to inspire future work in the
 field\footnote{\url{https://gitlab.idiap.ch/bob/bob.ip.binseg}}.
 
 In a second contribution\footcite{nsr-2022} we propose that a minimalistic
