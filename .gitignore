@@ -5,6 +5,7 @@
 *.out
 *.pdf
 *.swp
+*.bpx
 *~
 .DS_Store
 *.bcf
