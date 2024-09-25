@@ -2,6 +2,62 @@
 %%  2024  %%
 %%%%%%%%%%%%
 
+@misc{ssrn-2024,
+	title = {Automatic Transformer-Based Grading of Multiple Retinal Inflammatory Signs on Fluorescein Angiography},
+	url = {https://papers.ssrn.com/abstract=4960069},
+	doi = {10.2139/ssrn.4960069},
+	abstract = {Background: Grading fluorescein angiography ({FA}) in the context of uveitis is complex, often leading to the oversight of retinal inflammation in clinical studies. This study aims to develop an automated method for grading retinal inflammation.},
+	number = {4960069},
+	author = {Amiot, Victor and Jimenez-del-Toro, Oscar and Guex-Croisier, Yan and Ott, Muriel and Bogaciu, Teodora-Elena and Banerjee, Shalini and Howell, Jeremy and Amstutz, Christoph and Chiquet, Christophe and Bergin, Ciara and Meloni, Ilenia and Tomasoni, Mattia and Hoogewoud, Florence and Anjos, André},
+    year = {2024},
+    month = 9,
+    day = 24,
+	keywords = {capillaropathy, Deep Learning, disease grading, fluorescein angiography, inter-grader agreement, macular edema, optic disc hyperfluorescence, ordinal classification index, papillitis, retinal inflammation, transformers, Uveitis, vascular leakage, vasculitis},
+}
+
+
+@inproceedings{miccai-2024,
+         author = {Queiroz Neto, Dilermando and Anjos, Andr{\'{e}} and Berton, Lilian},
+       keywords = {Fairness, Foundation Model, Medical Image},
+          month = 10,
+          title = {Using Backbone Foundation Model for Evaluating Fairness in Chest Radiography Without Demographic Data},
+      booktitle = {Proceedings of the International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)},
+           year = {2024},
+       abstract = {Ensuring consistent performance across diverse populations and incorporating fairness into machine learning models are crucial for advancing medical image diagnostics and promoting equitable healthcare. However, many databases do not provide protected attributes or contain unbalanced representations of demographic groups, complicating the evaluation of model performance across different demographics and the application of bias mitigation techniques that rely on these attributes. This study aims to investigate the effectiveness of using the backbone of Foundation Models as an embedding extractor for creating groups that represent protected attributes, such as gender and age. We propose utilizing these groups in different stages of bias mitigation, including pre-processing, in-processing, and evaluation. Using databases in and out-of-distribution scenarios, it is possible to identify that the method can create groups that represent gender in both databases and reduce in 4.44\% the difference between the gender attribute in-distribution and 6.16\% in out-of-distribution. However, the model lacks robustness in handling age attributes, underscoring the need for more fundamentally fair and robust Foundation models. These findings suggest a role in promoting fairness assessment in scenarios where we lack knowledge of attributes, contributing to the development of more equitable medical diagnostics.},
+            pdf = {https://publications.idiap.ch/attachments/papers/2024/QueirozNeto_CVPR_2024.pdf}
+}
+
+@inproceedings{eccv-2024,
+         author = {Queiroz Neto, Dilermando and Carlos, Anderson and Fatoretto, Ma{\'{\i}}ra and Nakayama, Luis Filipe and Anjos, Andr{\'{e}} and Berton, Lilian},
+       projects = {FAIRMI},
+          month = 10,
+          title = {Does Data-Efficient Generalization Exacerbate Bias in Foundation Models?},
+      booktitle = {Proceedings of the 18th European Conference on Computer Vision (ECCV)},
+           year = {2024},
+       abstract = {Foundation models have emerged as robust models with label efficiency in diverse domains. In medical imaging, these models contribute to the advancement of medical diagnoses due to the difficulty in obtaining labeled data. However, it is unclear whether using a large amount of unlabeled data, biased by the presence of sensitive attributes during pre-training, influences the fairness of the model. This research examines the bias in the Foundation model (RetFound) when it is applied to fine-tune the Brazilian Multilabel Ophthalmological Dataset (BRSET), which has a different population than the pre-training dataset. The model evaluation, in comparison with supervised learning, shows that the Foundation Model has the potential to reduce the gap between the maximum AUC and minimum AUC evaluations across gender and age groups. However, in a data-efficient generalization, the model increases the bias when the data amount decreases. These findings suggest that when deploying a Foundation Model in real-life scenarios with limited data, the possibility of fairness issues should be considered.},
+            pdf = {https://publications.idiap.ch/attachments/papers/2024/QueirozNeto_ECCV_2024.pdf}
+}
+
+@inproceedings{euvip-2024-2,
+         author = {Jimenez-del-Toro, Oscar and Aberle, Christoph and Schaer, Roger and Bach, Michael and Flouris, Kyriakos and Konukoglu, Ender and Stieltjes, Bram and Obmann, Markus M. and Anjos, Andr{\'{e}} and M{\"{u}}ller, Henning and Depeursinge, Adrien},
+          month = 9,
+          title = {Comparing Stability and Discriminatory Power of Hand-crafted Versus Deep Radiomics: A 3D-Printed Anthropomorphic Phantom Study},
+      booktitle = {Proceedings of the 12th European Workshop on Visual Information Processing},
+           year = {2024},
+       abstract = {Radiomics have the ability to comprehensively quantify human tissue characteristics in medical imaging studies. However, standard radiomic features are highly unstable due to their sensitivity to scanner and reconstruction settings. We present an evaluation framework for the extraction of 3D deep radiomics features using a pre-trained neural network on real computed tomography (CT) scans for tissue characterization. We compare both the stability and discriminative power of the proposed 3D deep learning radiomic features versus standard hand-crafted radiomic features using 8 image acquisition protocols with a 3D-printed anthropomorphic phantom containing 4 classes of liver lesions and normal tissue. Even when the deep learning model was trained on an external dataset and for a different tissue characterization task, the resulting generic deep radiomics are at least twice more stable on 8 CT parameter variations than any category of hand-crafted features. Moreover, the 3D deep radiomics were also discriminative for the tissue characterization between 4 classes of liver tissue and lesions, with an average discriminative power of 93.5\%.},
+            pdf = {https://publications.idiap.ch/attachments/papers/2024/Jimenez-del-Toro_EUVIP2024_2024.pdf}
+}
+
+@inproceedings{euvip-2024-1,
+         author = {G{\"{u}}ler, {\"{O}}zg{\"{u}}r and G{\"{u}}nther, Manuel and Anjos, Andr{\'{e}}},
+          month = 9,
+          title = {Refining Tuberculosis Detection in CXR Imaging: Addressing Bias in Deep Neural Networks via Interpretability},
+      booktitle = {Proceedings of the 12th European Workshop on Visual Information Processing},
+           year = {2024},
+       abstract = {Automatic classification of active tuberculosis from chest X-ray images has the potential to save lives, especially in low- and mid-income countries where skilled human experts can be scarce. Given the lack of available labeled data to train such systems and the unbalanced nature of publicly available datasets, we argue that the reliability of deep learning models is limited, even if they can be shown to obtain perfect classification accuracy on the test data. One way of evaluating the reliability of such systems is to ensure that models use the same regions of input images for predictions as medical experts would. In this paper, we show that pre-training a deep neural network on a large-scale proxy task, as well as using mixed objective optimization network (MOON), a technique to balance different classes during pre-training and fine-tuning, can improve the alignment of decision foundations between models and experts, as compared to a model directly trained on the target dataset. At the same time, these approaches keep perfect classification accuracy according to the area under the receiver operating characteristic curve (AUROC) on the test set, and improve generalization on an independent, unseen dataset. For the purpose of reproducibility, our source code is made available online.},
+            pdf = {https://publications.idiap.ch/attachments/papers/2024/Guler_EUVIP24_2024.pdf}
+}
+
 @article{mvr-2024,
          author = {Mautuit, Thibaud and Cunnac, Pierre and Truffer, Fr{\'{e}}d{\'{e}}ric and Anjos, Andr{\'{e}} and Dufrane, Rebecca and Ma{\^{\i}}tre, Gilbert and Geiser, Martial and Chiquet, Christophe},
           month = 1,
@@ -180,8 +236,8 @@ This work is reproducible.  Source code, evaluation protocols and baseline resul
 	title = {The Little W-Net That Could: State-of-the-Art Retinal Vessel Segmentation with Minimalistic Models},
 	author = {Galdran, Adrian and Anjos, André and Dolz, José and Chakor, Hadi and Lombaert, Hervé and Ayed, Ismail Ben},
 	year = {2020},
-    addendum = {(Issued from internship supervision)},
     month = 9,
+    doi = {10.48550/arXiv.2009.01907},
 	eprinttype = {arxiv},
     eprint        = {2009.01907},
     archivePrefix = {arXiv},
@@ -219,6 +275,7 @@ This work is reproducible.  Source code, evaluation protocols and baseline resul
    eprint        = {1909.03856},
    archivePrefix = {arXiv},
    primaryClass  = {cs.CV},
+   doi           = {10.48550/arXiv.1909.03856},
    url           = {https://arxiv.org/abs/1909.03856},
    pdf           = {https://arxiv.org/pdf/1909.03856},
    journaltitle = {{arXiv}:1909.03856 [cs] (submitted to IEEE International Symposium on Biomedical Imaging 2021)},
@@ -377,7 +434,7 @@ This work is reproducible.  Source code, evaluation protocols and baseline resul
   primaryClass = "cs-se",
   addendum = {(Issued from project co-supervision)},
   url = "https://arxiv.org/abs/1709.00962",
-  pdf = "https://www.idiap.ch/~aanjos/papers/arxiv-2017-2.pdf",
+  doi = {10.48550/arXiv.1709.00962},
   abstract = "This paper studies the problem of reproducible research in remote photoplethysmography (rPPG). Most of the work published in this domain is assessed on privately-owned databases, making it difficult to evaluate proposed algorithms in a standard and principled manner. As a consequence, we present a new, publicly available database containing a relatively large number of subjects recorded under two different lighting conditions. Also, three state-of-the-art rPPG algorithms from the literature were selected, implemented and released as open source free software. After a thorough, unbiased experimental evaluation in various settings, it is shown that none of the selected algorithms is precise enough to be used in a real-world scenario.",
 }
 
@@ -446,8 +503,8 @@ This work is reproducible.  Source code, evaluation protocols and baseline resul
   archivePrefix = "arXiv",
   eprint = "1704.02319",
   primaryClass = "cs-se",
+  doi = {10.48550/arXiv.1704.02319},
   url = "https://arxiv.org/abs/1704.02319",
-  pdf = "https://www.idiap.ch/~aanjos/papers/arxiv-2017.pdf",
   abstract = "With the increased interest in computational sciences, machine learning (ML), pattern recognition (PR) and big data, governmental agencies, academia and manufacturers are overwhelmed by the constant influx of new algorithms and techniques promising improved performance, generalization and robustness. Sadly, result reproducibility is often an overlooked feature accompanying original research publications, competitions and benchmark evaluations. The main reasons behind such a gap arise from natural complications in research and development in this area: the distribution of data may be a sensitive issue; software frameworks are difficult to install and maintain; Test protocols may involve a potentially large set of intricate steps which are difficult to handle. Given the raising complexity of research challenges and the constant increase in data volume, the conditions for achieving reproducible research in the domain are also increasingly difficult to meet.
 
 To bridge this gap, we built an open platform for research in computational sciences related to pattern recognition and machine learning, to help on the development, reproducibility and certification of results obtained in the field. By making use of such a system, academic, governmental or industrial organizations enable users to easily and socially develop processing toolchains, re-use data, algorithms, workflows and compare results from distinct algorithms and/or parameterizations with minimal effort. This article presents such a platform and discusses some of its key features, uses and limitations. We overview a currently operational prototype and provide design insights.",
