@@ -1,0 +1,15 @@
+[project]
+name = "cv"
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-arm64"]
+
+[dependencies]
+python = "3.*"
+make = "*"
+pybtex = "*"
+pre-commit = "*"
+git = "*"
+
+[tasks]
+# filters publications from the last 5 years preserving order
+filter-bib = "python3 subselect.py"
